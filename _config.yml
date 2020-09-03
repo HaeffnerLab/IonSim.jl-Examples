@@ -1,0 +1,16 @@
+# Book settings
+title: 
+author: Haeffnerlab 
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# repository:
+#     url: "http://192.168.1.2:8000/index.html"
+#     use_repository_button: true
+
+execute:
+    stderr_output: remove 
+
