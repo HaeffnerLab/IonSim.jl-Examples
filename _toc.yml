@@ -7,7 +7,7 @@
   chapters:
     - file: example-notebooks/ramped_molmer_sorensen
     - file: example-notebooks/two_ion_vaet
-    - file: example-notebooks/multi_mode_interactions
+    - file: example-notebooks/multi-mode_interactions
 - part: Learn
   chapters:
     - file: coming_soon
