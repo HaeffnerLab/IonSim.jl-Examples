@@ -35,7 +35,7 @@ jobs:
 
     - name: Install Julia dependencies
       run: | 
-        julia 'import Pkg; Pkg.add("IJulia"); using IJulia'
+        julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia'
 
     # Build the book
     - name: Build the book
