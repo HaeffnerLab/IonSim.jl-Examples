@@ -13,4 +13,7 @@ latex:
 
 execute:
     stderr_output: remove 
+    execute_notebooks: cache
+    timeout: "-1"
+    allow_errors: true
 

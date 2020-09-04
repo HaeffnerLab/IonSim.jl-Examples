@@ -1,4 +1,4 @@
-Tutorials & Examples
+Introduction
 ============================
 
 This page contains a collection of interactive [Jupyter notebooks](https://jupyter.org/) intended to familiarize you with using `IonSim.jl`. These notebooks are organized into several sections:

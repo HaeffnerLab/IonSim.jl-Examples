@@ -32,8 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-["mode.N = 1  # we're not paying attention to the vibrational mode here, so we set its dimension to 1", '', '# construct a zero operator', 'L.E = 0', 'T.δB = 5e-8']
-...
-['plt.xlim(tspan[1], tspan[end])', 'plt.ylim(0, 1)', 'plt.legend()', 'plt.ylabel("Ramsey Signal")', 'plt.xlabel("Time [μs]");']
+using Revise
+using IonSim
+using QuantumOptics: timeevolution, stochastic
 -------------------
 
