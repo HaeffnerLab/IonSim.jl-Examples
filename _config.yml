@@ -1,19 +1,33 @@
 # Book settings
 title: "" 
-author: Haeffnerlab 
+author: ""
 logo: logo.png
 
 latex:
   latex_documents:
     targetname: book.tex
 
-# repository:
-#     url: "http://192.168.1.2:8000/index.html"
-#     use_repository_button: true
+repository:
+  url: "https://github.com/HaeffnerLab/IonSim.jl-Examples"
 
 execute:
-    stderr_output: remove 
-    execute_notebooks: cache
-    timeout: 1000000 
-    allow_errors: true
+  stderr_output: remove 
+  execute_notebooks: cache
+  timeout: 1000000 
+  allow_errors: true
+  exclude_patterns: ["not-included/*"]
 
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+
+sphinx:
+  config:
+    html_favicon: small-logo.png
+    html_static_path: ['customize']
+    html_js_filses: ['customize.js']
+
+launch_buttons: 
+  thebe: true
+  colab_url: false
