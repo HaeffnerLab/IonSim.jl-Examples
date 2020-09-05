@@ -31,3 +31,4 @@ sphinx:
 launch_buttons: 
   thebe: true
   colab_url: false
+  binderhub_url: "https://mybinder.org"
