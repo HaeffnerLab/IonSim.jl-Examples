@@ -27,7 +27,7 @@ sphinx:
   config:
     html_favicon: small-logo.png
     html_static_path: ['customize']
-    html_js_filses: ['customize.js']
+    html_js_files: ['customize.js']
 
 launch_buttons: 
   thebe: true
