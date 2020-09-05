@@ -9,6 +9,7 @@ latex:
 
 repository:
   url: "https://github.com/HaeffnerLab/IonSim.jl-Examples"
+  path_to_book: "webpage"
 
 execute:
   stderr_output: remove 
