@@ -3,6 +3,7 @@ DSP = "717857b8-e6f2-59f4-9121-6e50c889abd2"
 IonSim = "511e77fe-ab93-41f7-8f07-8f89809c6435"
 QuantumOptics = "6e0679c1-51ea-5a7c-ac74-d61b76210b0c"
 StochasticDiffEq = "789caeaf-c7a9-5a7d-9973-96adeb23e2a0"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
 
 [compat]
 QuantumOptics = "0.8.0"

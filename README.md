@@ -8,4 +8,6 @@ A GitHub action has been created (workflow description located at `.github/workf
 
 *Note: after building, also please double check that the `custom domain` is set to `examples.ionsim.org` in the repo settings (and `enforce HTTPS` is selected)*
 
+*Note: when adding a notebook, in order for interactivity to work, you'll need to make sure that any dependencies are reflected in the current state of the `Project.toml` file.*
+
 The webpage is published to [https://examples.ionsim.org/intro.html](https://examples.ionsim.org).
