@@ -26,7 +26,10 @@
     <script src="_static/copybutton.js"></script>
     <script src="_static/customize.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/customize.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -37,6 +40,7 @@
     <link rel="shortcut icon" href="_static/small-logo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started with IonSim" href="tutorial-notebooks/getting_started.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,6 +78,53 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorial-notebooks/getting_started.html">
+   Getting started with IonSim
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="example-notebooks/ramped_molmer_sorensen.html">
+   Ramped Mølmer-Sørensen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="example-notebooks/two_ion_vaet.html">
+   Two-ion Vibrationally Assisted Energy Transport (VAET)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="example-notebooks/multi-mode_interactions.html">
+   Ion-laser interactions mediated by multiple vibrational modes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Learn
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="learn-notebooks/coming_soon.html">
+   Coming Soon
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -137,7 +188,7 @@
             href="https://github.com/HaeffnerLab/IonSim.jl-Examples/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/HaeffnerLab/IonSim.jl-Examples/edit/master/intro.md"><button
+        <a class="edit-button" href="https://github.com/HaeffnerLab/IonSim.jl-Examples/edit/master/webpage/intro.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -174,9 +225,22 @@
 <br></p>
 <ul class="simple">
 <li><p><strong>Tutorials</strong> and <strong>Examples</strong>: A collection of walkthroughs and examples designed to demonstrate a particular concept.
-<br></p></li>
-<li><p><strong>Learn</strong>: This section is meant to be a pedagogical introduction to the core concepts in Trapped ions (state preparation, single-ion operations, entanglement-operations).</p></li>
+<br><br></p></li>
+<li><p><strong>Learn</strong>: A pedagogical introduction to the core concepts in Trapped ions (state preparation, single-ion operations, entanglement-operations).</p></li>
 </ul>
+<p>You can return to the main page <a class="reference external" href="https://www.ionsim.org">here</a> (or by clicking on the logo in the sidebar).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Where available, interactive notebooks can be launched by clicking on the <i class="fas fa-rocket"></i> icon. This allows you to launch a Jupyter session in the cloud using <a class="reference external" href="https://mybinder.org/">BinderHub</a>. Because Binder first needs to build the appropriate environment (inlcuding all dependencies), it can take a while to launch initially. Computational resources are also limited in the free service and we are not thoroughly maintaining compatability. But perhaps you’ll still find this feature useful.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This webpage is built dynamically using <a class="reference external" href="https://jupyterbook.org/">Jupyter Book</a>. At build time, notebooks are executed remotely on a GitHub server. Julia’s <code class="docutils literal notranslate"><span class="pre">&#64;time</span></code> macro is used in various places to give an idea of the runtime for snippets of code. However, because of our lack of control over the execution environment, these values should be taken with a grain of salt. For example, solving for the evolution corresponding to the <a class="reference internal" href="example-notebooks/two_ion_vaet.html#vaet-simulation-solve"><span class="std std-ref">VAET Hamiltonian</span></a> runs as much as six times slower as compared to a standard MacBook Pro.</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -209,6 +273,7 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='right-next' id="next-link" href="tutorial-notebooks/getting_started.html" title="next page">Getting started with IonSim</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

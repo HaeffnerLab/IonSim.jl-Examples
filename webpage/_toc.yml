@@ -1,15 +1,15 @@
 - file: intro
 
-#- part: Tutorials
-  #chapters:
-    #- file: example-notebooks/getting_started
+- part: Tutorials
+  chapters:
+    - file: tutorial-notebooks/getting_started
 
 - part: Examples
   chapters:
     - file: example-notebooks/ramped_molmer_sorensen
     - file: example-notebooks/two_ion_vaet
-    #- file: example-notebooks/multi-mode_interactions
+    - file: example-notebooks/multi-mode_interactions
 
-#- part: Learn
-  #chapters:
-    #- file: coming_soon
+- part: Learn
+  chapters:
+    - file: learn-notebooks/coming_soon

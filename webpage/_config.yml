@@ -28,8 +28,12 @@ sphinx:
     html_favicon: small-logo.png
     html_static_path: ['customize']
     html_js_files: ['customize.js']
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 launch_buttons: 
   thebe: true
   colab_url: false
   binderhub_url: "https://mybinder.org"
+
+parse:
+  myst_extended_syntax: true
