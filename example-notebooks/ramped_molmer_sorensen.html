@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ramped Molmer-Sorensen</title>
+    <title>Ramped Mølmer-Sørensen</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -29,7 +29,7 @@
     <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/customize.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -41,7 +41,8 @@
     <link rel="shortcut icon" href="../_static/small-logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Introduction" href="../intro.html" />
+    <link rel="next" title="Two-ion Vibrationally Assisted Energy Transport (VAET)" href="two_ion_vaet.html" />
+    <link rel="prev" title="Getting started with IonSim" href="../tutorial-notebooks/getting_started.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -81,13 +82,47 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial-notebooks/getting_started.html">
+   Getting started with IonSim
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Examples
  </span>
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Ramped Molmer-Sorensen
+   Ramped Mølmer-Sørensen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="two_ion_vaet.html">
+   Two-ion Vibrationally Assisted Energy Transport (VAET)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi-mode_interactions.html">
+   Ion-laser interactions mediated by multiple vibrational modes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Learn
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learn-notebooks/coming_soon.html">
+   Coming Soon
   </a>
  </li>
 </ul>
@@ -199,28 +234,79 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-take-delta-phi-0">
-   First take
-   <span class="math notranslate nohighlight">
-    \(\Delta\phi=0\)
-   </span>
+  <a class="reference internal nav-link" href="#correlated-phase">
+   Correlated Phase
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#construct-the-system">
+     Construct the system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-the-laser-parameters">
+     Set the laser parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-the-hamiltonian-solve-the-system">
+     Build the Hamiltonian / solve the system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-results">
+     Plot results
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#now-take-delta-phi-pi">
-   Now take
-   <span class="math notranslate nohighlight">
-    \(\Delta\phi = \pi\)
-   </span>
+  <a class="reference internal nav-link" href="#anti-correlated-phase">
+   Anti-correlated phase
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#update-phase">
+     Update phase
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Build the Hamiltonian / solve the system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Plot results
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#keeping-delta-phi-pi-apply-ramps-to-the-laser-amplitudes">
-   Keeping
-   <span class="math notranslate nohighlight">
-    \(\Delta\phi=\pi\)
-   </span>
-   , apply ramps to the laser amplitudes
+  <a class="reference internal nav-link" href="#anti-correlated-phase-with-ramped-laser-intensity">
+   Anti-correlated phase with ramped laser intensity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#update-intensity-profile">
+     Update intensity profile
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Build the Hamiltonian / solve the system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Plot results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
   </a>
  </li>
 </ul>
@@ -234,33 +320,20 @@
               <div>
                 
   <div class="section" id="ramped-molmer-sorensen">
-<h1>Ramped Molmer-Sorensen<a class="headerlink" href="#ramped-molmer-sorensen" title="Permalink to this headline">¶</a></h1>
+<h1>Ramped Mølmer-Sørensen<a class="headerlink" href="#ramped-molmer-sorensen" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">QuantumOptics</span>
 <span class="k">using</span> <span class="n">IonSim</span>
 <span class="k">import</span> <span class="n">PyPlot</span>
-<span class="kd">const</span> <span class="n">plt</span> <span class="o">=</span> <span class="n">PyPlot</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Failed</span> <span class="n">to</span> <span class="n">precompile</span> <span class="n">QuantumOptics</span> <span class="p">[</span><span class="mf">6e0679</span><span class="n">c1</span><span class="o">-</span><span class="mi">51</span><span class="n">ea</span><span class="o">-</span><span class="mi">5</span><span class="n">a7c</span><span class="o">-</span><span class="n">ac74</span><span class="o">-</span><span class="n">d61b76210b0c</span><span class="p">]</span> <span class="n">to</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">compiled</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">4</span><span class="o">/</span><span class="n">QuantumOptics</span><span class="o">/</span><span class="n">gWeRI_c81Xm</span><span class="o">.</span><span class="n">ji</span><span class="o">.</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1272</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">_require</span><span class="p">(::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1029</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">require</span><span class="p">(::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">927</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">require</span><span class="p">(::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">Symbol</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">922</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span><span class="mi">1</span>
+<span class="kd">const</span> <span class="n">plt</span> <span class="o">=</span> <span class="n">PyPlot</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># set some plot configs</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># set some plot configs for the notebook</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;xtick&quot;</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;ytick&quot;</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">false</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;axes&quot;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">true</span><span class="p">)</span>
@@ -273,51 +346,68 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: plt not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
 </div>
+<p>Consider two ions (modeled as two-level systems) and a single vibrational mode, addressed by bichromatic light in a rotating frame:</p>
+<div class="math notranslate nohighlight" id="equation-ms-hamiltonian">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ms-hamiltonian" title="Permalink to this equation">¶</a></span>\[
+{\hat{H} = \frac{\Omega(t)}{2} \sum\limits_{i=1,2}\bigg[ \bigg(\hat{\sigma}_+^{(1)} + \hat{\sigma}_+^{(2)}\bigg) \otimes e^{i[\eta (\hat{a}e^{-i\nu t} + \hat{a}^{\dagger}e^{i\nu t}) - (\Delta_i t + \phi_i)]} \bigg] + h.c. }
+\]</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Variable definitions:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ul class="simple">
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\Omega}\)</span>: Characterizes the strength of the ion-light interaction, which we assume to be identical for both lasers.</p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\hat{\sigma_+}^{(i)}}\)</span>: If we model the electronic energy levels of the ion in order of increasing energy as <span class="math notranslate nohighlight">\(|1⟩\)</span>, <span class="math notranslate nohighlight">\(|2⟩\)</span>, then <span class="math notranslate nohighlight">\(σ̂₊ = |2⟩⟨1|\)</span> (the superscript denotes the ion).</p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\eta}\)</span>: Denotes the <em>Lamb-Dicke</em> factor, which characterizes the strength with which the laser interaction couples the ion’s motion to its electronic states.</p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{â}\)</span>: The Boson annihilation operator for the vibrational mode.</p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\nu}\)</span>: The vibrational mode frequency.</p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\Delta_i}\)</span>: The detuning of the <span class="math notranslate nohighlight">\(i^{th}\)</span> laser from the electronic energy splitting of the ion (assumed to be the same for both ions).</p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\phi_i}\)</span>: The phase of the <span class="math notranslate nohighlight">\(i^{th}\)</span> laser.</p></li>
+</ul>
 </div>
+</details><p>Assuming <span class="math notranslate nohighlight">\(\Delta_{1,2} = \pm (\nu + \epsilon)\)</span>, then, under the right conditions, this interaction can be used to produce a maximally entangled Bell state of the two ions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This interaction is the basis of the Mølmer-Sørensen gate, used by trapped-ion quantum computers.</p>
 </div>
-<p>Consider two ions and a single vibrational mode, addressed by bichromatic light in a rotating frame:<br><br></p>
-<hr class="docutils" />
-<p><span class="math notranslate nohighlight">\({\hat{H} = \frac{\Omega(t)}{2} \sum\limits_{i=1,2}\bigg[ \bigg(\hat{\sigma}_+^{(1)} + \hat{\sigma}_+^{(2)}\bigg) \otimes e^{i[\eta (\hat{a}e^{-i\nu t} + \hat{a}^{\dagger}e^{i\nu t}) - (\Delta_i t + \phi_i)]} \bigg] + h.c. }
-\)</span></p>
-<hr class="docutils" />
-<p>Assuming <span class="math notranslate nohighlight">\(\Delta_i = \pm (\nu + \epsilon)\)</span>, then under the right conditions, this interaction (known as a Molmer-Sorensen interaction) can be used to produce a maximally entangled Bell state of the two ions.</p>
-<p>However, it is <a class="reference external" href="https://iopscience.iop.org/article/10.1088/1367-2630/10/1/013002/meta">shown</a> that a poor choice of the relative phase <span class="math notranslate nohighlight">\(\Delta\phi = \phi_1 - \phi_2\)</span> between the two lasers (worst case <span class="math notranslate nohighlight">\(\Delta\phi=\pi\)</span>), can impact the quality of this process by amplifying the effect of off-resonant carrier transitions.</p>
-<p>Fortunately, by ramping up the amplitudes of the lasers, we can eliminate this dependency on <span class="math notranslate nohighlight">\(\Delta\phi\)</span>.</p>
-<p>In this example, we examine this effect, which will demonstrate how to apply time-dependent laser amplitudes.</p>
-<div class="section" id="first-take-delta-phi-0">
-<h2>First take <span class="math notranslate nohighlight">\(\Delta\phi=0\)</span><a class="headerlink" href="#first-take-delta-phi-0" title="Permalink to this headline">¶</a></h2>
+<p>However, in <a class="bibtex reference internal" href="#roos-2008" id="id1">[Roo08]</a> it is shown that a poor choice of the relative phase <span class="math notranslate nohighlight">\(\Delta\phi = \phi_1 - \phi_2\)</span> between the two lasers can impact the quality of this process by amplifying the effect of off-resonant carrier transitions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This effect disappears when <span class="math notranslate nohighlight">\(\Delta\phi=0\)</span> and is maximum when <span class="math notranslate nohighlight">\(\Delta\phi=\pi\)</span>.</p>
+</div>
+<p>Fortunately, by ramping up the amplitudes of the lasers, we can eliminate this dependency on <span class="math notranslate nohighlight">\(\Delta\phi\)</span>.  In practice any smooth ramp that lasts a duration long relative to the period of the ion’s motion is sufficient.</p>
+<p>In this notebook, we examine this effect, which will demonstrate how to construct time-dependent laser intensity in IonSim.</p>
+<div class="section" id="correlated-phase">
+<h2>Correlated Phase<a class="headerlink" href="#correlated-phase" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="construct-the-system">
+<h3>Construct the system<a class="headerlink" href="#construct-the-system" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># Construct the system</span>
 <span class="n">C</span> <span class="o">=</span> <span class="n">Ca40</span><span class="p">([</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">])</span>
-<span class="n">L1</span> <span class="o">=</span> <span class="n">Laser</span><span class="p">();</span> <span class="n">L1</span><span class="o">.</span><span class="n">pointing</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)]</span>
-<span class="n">L2</span> <span class="o">=</span> <span class="n">Laser</span><span class="p">();</span> <span class="n">L2</span><span class="o">.</span><span class="n">pointing</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)]</span>
-<span class="n">chain</span> <span class="o">=</span> <span class="n">LinearChain</span><span class="p">(</span><span class="n">ions</span><span class="o">=</span><span class="p">[</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">],</span> <span class="n">com_frequencies</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">3e6</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">3e6</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mf">2.5e5</span><span class="p">),</span> <span class="n">vibrational_modes</span><span class="o">=</span><span class="p">(;</span><span class="n">z</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">L1</span> <span class="o">=</span> <span class="n">Laser</span><span class="p">(</span><span class="n">pointing</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)])</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">Laser</span><span class="p">(</span><span class="n">pointing</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)])</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">LinearChain</span><span class="p">(</span>
+        <span class="n">ions</span><span class="o">=</span><span class="p">[</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">],</span> <span class="n">com_frequencies</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">3e6</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">3e6</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mf">2.5e5</span><span class="p">),</span> <span class="n">vibrational_modes</span><span class="o">=</span><span class="p">(;</span><span class="n">z</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="p">)</span>
 <span class="n">T</span> <span class="o">=</span> <span class="n">Trap</span><span class="p">(</span><span class="n">configuration</span><span class="o">=</span><span class="n">chain</span><span class="p">,</span> <span class="n">B</span><span class="o">=</span><span class="mf">6e-4</span><span class="p">,</span> <span class="n">Bhat</span><span class="o">=</span><span class="p">(</span><span class="n">x̂</span> <span class="o">+</span> <span class="n">ẑ</span><span class="p">)</span><span class="o">/√</span><span class="mi">2</span><span class="p">,</span> <span class="n">lasers</span><span class="o">=</span><span class="p">[</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">]);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Ca40 not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
 </div>
 </div>
 </div>
+<div class="section" id="set-the-laser-parameters">
+<h3>Set the laser parameters<a class="headerlink" href="#set-the-laser-parameters" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mode</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">vibrational_modes</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="c"># Set the laser parameters</span>
 <span class="n">ϵ</span> <span class="o">=</span> <span class="mf">10e3</span>
 <span class="n">d</span> <span class="o">=</span> <span class="mi">350</span>  <span class="c"># corrects for AC stark shift from single-photon coupling to sidebands</span>
 <span class="n">Δf</span> <span class="o">=</span> <span class="n">transition_frequency</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">))</span>
@@ -336,269 +426,214 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="mi">1</span>
+</div>
+</div>
+<div class="section" id="build-the-hamiltonian-solve-the-system">
+<h3>Build the Hamiltonian / solve the system<a class="headerlink" href="#build-the-hamiltonian-solve-the-system" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># setup the Hamiltonian</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">lamb_dicke_order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="nb">Inf</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># Set the dimension of the vibrational mode</span>
-<span class="n">mode</span><span class="o">.</span><span class="n">N</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># solve system</span>
+<span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">210</span><span class="p">,</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">h</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span><span class="mi">1</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.170710 seconds (3.28 M allocations: 128.259 MiB, 10.86% gc time)
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="plot-results">
+<h3>Plot results<a class="headerlink" href="#plot-results" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">lamb_dicke_order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="nb">Inf</span><span class="p">);</span>  <span class="c"># setup the Hamiltonian</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: hamiltonian not defined
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">SS</span> <span class="o">=</span> <span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">)</span> 
+<span class="n">DD</span> <span class="o">=</span> <span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">)</span>
+<span class="n">SD</span> <span class="o">=</span> <span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">)</span>
+<span class="n">DS</span> <span class="o">=</span> <span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">)</span>
+<span class="n">bell_state</span> <span class="o">=</span> <span class="n">dm</span><span class="p">((</span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="nb">im</span> <span class="o">*</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;D-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;D-1/2&quot;</span><span class="p">])</span><span class="o">/√</span><span class="mi">2</span><span class="p">)</span> <span class="n">⊗</span> <span class="n">one</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
 
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">210</span><span class="p">,</span> <span class="n">ionstate</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">)</span> <span class="n">⊗</span> <span class="n">fockstate</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">h</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: timeevolution not defined
+<span class="c"># compute expectation values</span>
+<span class="n">prob_SS</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼(|S-1/2⟩|S-1/2⟩)</span>
+<span class="n">prob_DD</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">DD</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼(|D-1/2⟩|D-1/2⟩)</span>
+<span class="n">prob_SD</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">SD</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼(|S-1/2⟩|D-1/2⟩)</span>
+<span class="n">prob_DS</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">DS</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼(|D-1/2⟩|S-1/2⟩)</span>
+<span class="n">prob_bell</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">bell_state</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼((|S-1/2⟩|S-1/2⟩ + i|D-1/2⟩|D-1/2⟩)/√2)</span>
 
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span> <span class="n">at</span> <span class="o">./</span><span class="n">util</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">175</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="o">./</span><span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">SS</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
-<span class="n">DD</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
-<span class="n">SD</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
-<span class="n">DS</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
-<span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">SS</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;SS&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">DD</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;DD&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">SD</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;SD&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">DS</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;DS&quot;</span><span class="p">)</span>
+<span class="c"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_SS</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;SS&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_DD</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;DD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_SD</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;SD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_DS</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;DS&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_bell</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;Bell state&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">tout</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time [μs]&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: ionprojector not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
+<img alt="../_images/ramped_molmer_sorensen_14_0.png" src="../_images/ramped_molmer_sorensen_14_0.png" />
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="now-take-delta-phi-pi">
-<h2>Now take <span class="math notranslate nohighlight">\(\Delta\phi = \pi\)</span><a class="headerlink" href="#now-take-delta-phi-pi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="anti-correlated-phase">
+<h2>Anti-correlated phase<a class="headerlink" href="#anti-correlated-phase" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="update-phase">
+<h3>Update phase<a class="headerlink" href="#update-phase" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span><span class="o">.</span><span class="n">ϕ</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="nb">π</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L1 not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="mi">1</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span><span class="o">.</span><span class="n">ϕ</span> <span class="o">=</span> <span class="o">-</span><span class="nb">π</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">L2</span><span class="o">.</span><span class="n">ϕ</span> <span class="o">=</span> <span class="nb">π</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="id2">
+<h3>Build the Hamiltonian / solve the system<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">lamb_dicke_order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="nb">Inf</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: hamiltonian not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">210</span><span class="p">,</span> <span class="n">ionstate</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">)</span> <span class="n">⊗</span> <span class="n">fockstate</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">h</span><span class="p">);</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">210</span><span class="p">,</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">h</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: timeevolution not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span> <span class="n">at</span> <span class="o">./</span><span class="n">util</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">175</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="o">./</span><span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span><span class="mi">1</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.203665 seconds (3.62 M allocations: 141.363 MiB, 10.04% gc time)
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="id3">
+<h3>Plot results<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">SS</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
-<span class="n">DD</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
-<span class="n">SD</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
-<span class="n">DS</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
-<span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">SS</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;SS&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">DD</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;DD&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">SD</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;SD&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">DS</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="n">step</span><span class="o">:</span><span class="k">end</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;DS&quot;</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># compute expectation values</span>
+<span class="n">prob_SS</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼(|S-1/2⟩|S-1/2⟩)</span>
+<span class="n">prob_DD</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">DD</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼(|D-1/2⟩|D-1/2⟩)</span>
+<span class="n">prob_SD</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">SD</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼(|S-1/2⟩|D-1/2⟩)</span>
+<span class="n">prob_DS</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">DS</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼(|D-1/2⟩|S-1/2⟩)</span>
+<span class="n">prob_bell</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">bell_state</span><span class="p">,</span> <span class="n">sol</span><span class="p">)</span>  <span class="c"># 𝔼((|S-1/2⟩|S-1/2⟩ + i|D-1/2⟩|D-1/2⟩)/√2)</span>
+
+<span class="c"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_SS</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;SS&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_DD</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;DD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_SD</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;SD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_DS</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;DS&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">prob_bell</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;Bell state&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">tout</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time [μs]&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: ionprojector not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
+<img alt="../_images/ramped_molmer_sorensen_22_0.png" src="../_images/ramped_molmer_sorensen_22_0.png" />
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="keeping-delta-phi-pi-apply-ramps-to-the-laser-amplitudes">
-<h2>Keeping <span class="math notranslate nohighlight">\(\Delta\phi=\pi\)</span>, apply ramps to the laser amplitudes<a class="headerlink" href="#keeping-delta-phi-pi-apply-ramps-to-the-laser-amplitudes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="anti-correlated-phase-with-ramped-laser-intensity">
+<h2>Anti-correlated phase with ramped laser intensity<a class="headerlink" href="#anti-correlated-phase-with-ramped-laser-intensity" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="update-intensity-profile">
+<h3>Update intensity profile<a class="headerlink" href="#update-intensity-profile" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">Efield_from_pi_time</span><span class="p">(</span><span class="n">pi_time</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">))</span>
-
 <span class="c"># Simple amplitude ramping function</span>
-<span class="k">function</span> <span class="n">Ω</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">20</span>
-        <span class="k">return</span> <span class="n">E</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="nb">π</span> <span class="o">*</span> <span class="n">t</span> <span class="o">/</span> <span class="mi">80</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
-    <span class="k">elseif</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="mi">200</span>
-        <span class="k">return</span> <span class="n">E</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="nb">π</span> <span class="o">*</span> <span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="mi">200</span><span class="p">)</span> <span class="o">/</span> <span class="mi">80</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
-    <span class="k">else</span>
-        <span class="n">E</span>
-    <span class="k">end</span>
-<span class="k">end</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Efield_from_pi_time not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="mi">1</span>
+<span class="n">Ω</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="o">?</span> <span class="n">E</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="nb">π</span> <span class="o">*</span> <span class="n">t</span> <span class="o">/</span> <span class="mi">80</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">:</span> <span class="n">E</span>
+<span class="n">L1</span><span class="o">.</span><span class="n">E</span> <span class="o">=</span> <span class="n">L2</span><span class="o">.</span><span class="n">E</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="n">Ω</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span><span class="o">.</span><span class="n">E</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="n">Ω</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="n">L2</span><span class="o">.</span><span class="n">E</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="n">Ω</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
-</pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L1 not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="id4">
+<h3>Build the Hamiltonian / solve the system<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">lamb_dicke_order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="nb">Inf</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: hamiltonian not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">220</span><span class="p">,</span> <span class="n">ionstate</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">)</span> <span class="n">⊗</span> <span class="n">fockstate</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">h</span><span class="p">);</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">220</span><span class="p">,</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">h</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: timeevolution not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span> <span class="n">at</span> <span class="o">./</span><span class="n">util</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">175</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="o">./</span><span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="mi">1</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.298411 seconds (5.26 M allocations: 172.881 MiB, 13.08% gc time)
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="id5">
+<h3>Plot results<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span>SS = expect(ionprojector(T, &quot;S-1/2&quot;, &quot;S-1/2&quot;), sol)
-DD = expect(ionprojector(T, &quot;D-1/2&quot;, &quot;D-1/2&quot;), sol)
-SD = expect(ionprojector(T, &quot;S-1/2&quot;, &quot;D-1/2&quot;), sol)
-DS = expect(ionprojector(T, &quot;D-1/2&quot;, &quot;S-1/2&quot;), sol)
-step = 1
-plt.plot(tout[1:step:end], SS[1:step:end], label=&quot;SS&quot;)
-plt.plot(tout[1:step:end], DD[1:step:end], label=&quot;DD&quot;)
-plt.plot(tout[1:step:end], SD[1:step:end], label=&quot;SD&quot;)
-plt.plot(tout[1:step:end], DS[1:step:end], label=&quot;DS&quot;)
-plt.plot(tout, @.(Ω(tout) / 2E), linestyle=&quot;--&quot;, label=&quot;scaled ramp&quot;)
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span># compute expectation values
+prob_SS = expect(SS, sol)  # 𝔼(|S-1/2⟩|S-1/2⟩)
+prob_DD = expect(DD, sol)  # 𝔼(|D-1/2⟩|D-1/2⟩)
+prob_SD = expect(SD, sol)  # 𝔼(|S-1/2⟩|D-1/2⟩)
+prob_DS = expect(DS, sol)  # 𝔼(|D-1/2⟩|S-1/2⟩)
+prob_bell = expect(bell_state, sol)  # 𝔼((|S-1/2⟩|S-1/2⟩ + i|D-1/2⟩|D-1/2⟩)/√2)
+
+# plot results
+plt.plot(tout, prob_SS, label=&quot;SS&quot;)
+plt.plot(tout, prob_DD, label=&quot;DD&quot;)
+plt.plot(tout, prob_SD, label=&quot;SD&quot;)
+plt.plot(tout, prob_DS, label=&quot;DS&quot;)
+plt.plot(tout, prob_bell, label=&quot;Bell state&quot;)
+plt.plot(
+        tout, @.(Ω(tout) / 2E), 
+        linestyle=&quot;--&quot;, label=&quot;scaled ramp&quot;
+    )
 plt.xlim(tout[1], tout[end])
 plt.ylim(0, 1)
 plt.legend(loc=1)
-plt.xlabel(&quot;Time [μs]&quot;);
+plt.xlabel(&quot;Time (μs)&quot;);
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: ionprojector not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">]:</span><span class="mi">1</span>
-</pre></div>
+<img alt="../_images/ramped_molmer_sorensen_30_0.png" src="../_images/ramped_molmer_sorensen_30_0.png" />
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-example-notebooks/ramped_molmer_sorensen-0"><dl class="citation">
+<dt class="bibtex label" id="roos-2008"><span class="brackets"><a class="fn-backref" href="#id1">Roo08</a></span></dt>
+<dd><p>Christian F Roos. Ion trap quantum gates with amplitude-modulated laser beams. <em>New Journal of Physics</em>, 10(1):013002, jan 2008. URL: <a class="reference external" href="https://doi.org/10.1088%2F1367-2630%2F10%2F1%2F013002">https://doi.org/10.1088%2F1367-2630%2F10%2F1%2F013002</a>, <a class="reference external" href="https://doi.org/10.1088/1367-2630/10/1/013002">doi:10.1088/1367-2630/10/1/013002</a>.</p>
+</dd>
+</dl>
+</p>
 </div>
 </div>
 
@@ -630,7 +665,8 @@ plt.xlabel(&quot;Time [μs]&quot;);
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introduction</a>
+    <a class='left-prev' id="prev-link" href="../tutorial-notebooks/getting_started.html" title="previous page">Getting started with IonSim</a>
+    <a class='right-next' id="next-link" href="two_ion_vaet.html" title="next page">Two-ion Vibrationally Assisted Energy Transport (VAET)</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

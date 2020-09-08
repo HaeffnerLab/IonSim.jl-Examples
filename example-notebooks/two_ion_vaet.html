@@ -1,0 +1,744 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two-ion Vibrationally Assisted Energy Transport (VAET)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/customize.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/customize.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/small-logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ion-laser interactions mediated by multiple vibrational modes" href="multi-mode_interactions.html" />
+    <link rel="prev" title="Ramped Mølmer-Sørensen" href="ramped_molmer_sorensen.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial-notebooks/getting_started.html">
+   Getting started with IonSim
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ramped_molmer_sorensen.html">
+   Ramped Mølmer-Sørensen
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Two-ion Vibrationally Assisted Energy Transport (VAET)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi-mode_interactions.html">
+   Ion-laser interactions mediated by multiple vibrational modes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Learn
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learn-notebooks/coming_soon.html">
+   Coming Soon
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/example-notebooks/two_ion_vaet.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/HaeffnerLab/IonSim.jl-Examples"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/HaeffnerLab/IonSim.jl-Examples/issues/new?title=Issue%20on%20page%20%2Fexample-notebooks/two_ion_vaet.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/HaeffnerLab/IonSim.jl-Examples/edit/master/webpage/example-notebooks/two_ion_vaet.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/HaeffnerLab/IonSim.jl-Examples/master?urlpath=tree/webpage/example-notebooks/two_ion_vaet.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hat-h-s-s">
+   <span class="math notranslate nohighlight">
+    \(\hat{H}_{S-S}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#engineering-the-spin-spin-coupling-term">
+     Engineering the spin-spin coupling term
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#construct-the-system">
+     Construct the system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-the-laser-parameters">
+     Set the laser parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#construct-hamiltonian-solve-system">
+     Construct Hamiltonian / Solve system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-results">
+     Plot results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hat-h-s-s-hat-h-s">
+   <span class="math notranslate nohighlight">
+    \(\hat{H}_{S-S} + \hat{H}_{S}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#engineering-the-energy-barrier">
+     Engineering the energy barrier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Construct Hamiltonian / Solve system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Plot results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hat-h-s-s-hat-h-s-hat-h-s-b-hat-h-b">
+   <span class="math notranslate nohighlight">
+    \(\hat{H}_{S-S} + \hat{H}_{S} + \hat{H}_{S-B} + \hat{H}_{B}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#engineering-the-vibrational-mode-coupling">
+     Engineering the vibrational mode coupling
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setup-two-additional-lasers-for-the-s-b-hamiltonian">
+       setup two additional lasers for the S-B Hamiltonian
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#set-the-parameters-for-these-new-lasers">
+       Set the parameters for these new lasers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vaet-simulation-solve">
+     Construct Hamiltonian / Solve system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Plot results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="two-ion-vibrationally-assisted-energy-transport-vaet">
+<h1>Two-ion Vibrationally Assisted Energy Transport (VAET)<a class="headerlink" href="#two-ion-vibrationally-assisted-energy-transport-vaet" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">QuantumOptics</span>
+<span class="k">using</span> <span class="n">IonSim</span>
+<span class="k">import</span> <span class="n">PyPlot</span>
+<span class="kd">const</span> <span class="n">plt</span> <span class="o">=</span> <span class="n">PyPlot</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># set some plot configs</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;xtick&quot;</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;ytick&quot;</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">false</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;axes&quot;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">true</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;axes&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;grid&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;font&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s">&quot;Palatino&quot;</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s">&quot;medium&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;figure&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;xtick.major&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s">&quot;ytick.major&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>In <a class="bibtex reference internal" href="#physrevx-8-011038" id="id1">[GHM+18]</a> it is demonstrated that two ions in a Paul trap can be used to simulate the following Hamiltonian:</p>
+<div class="math notranslate nohighlight" id="equation-vaet-hamiltonian">
+<span class="eqno">(3)<a class="headerlink" href="#equation-vaet-hamiltonian" title="Permalink to this equation">¶</a></span>\[
+{
+\hat{H} = \underbrace{\frac{J}{2} \hat{\sigma}_x^{(1)} \otimes  \hat{\sigma}_x^{(2)}}_{\hat{H}_{S-S}} + \underbrace{\frac{\Delta}{2}  \hat{\sigma}_z^{(2)}}_{\hat{H}_{S}} + 
+\underbrace{\frac{\kappa}{2}  \hat{\sigma}_z^{(2)} \otimes (\hat{a} + \hat{a}^{\dagger})}_{\hat{H}_{S-B}} + 
+\underbrace{\nu_{eff} \hat{a}^{\dagger}\hat{a}}_{\hat{H}_{B}}
+}
+\]</div>
+<p>whose dynamics are capable of exhibiting a phenomenon known as <em>vibrationally assisted energy transport</em> (VAET).</p>
+<p>For an initial state <span class="math notranslate nohighlight">\(|\uparrow \downarrow\rangle\)</span>, the effect of <span class="math notranslate nohighlight">\(\hat{H}_{S-S}\)</span> is to drive population exchange between the states <span class="math notranslate nohighlight">\(|\uparrow \downarrow\rangle \leftrightarrow |\downarrow \uparrow\rangle\)</span> at a rate <span class="math notranslate nohighlight">\(J/2\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\hat{H}_{S}\)</span> acts as an energy barrier to this exchange with a strength <span class="math notranslate nohighlight">\(\Delta\)</span>. If <span class="math notranslate nohighlight">\(\Delta\)</span> becomes comparable in magnitude to <span class="math notranslate nohighlight">\(J\)</span>, then population exchange will be highly suppressed.</p>
+<p><span class="math notranslate nohighlight">\(\hat{H}_{S-B}\)</span> couples the 2<span class="math notranslate nohighlight">\(^{nd}\)</span> spin to the vibrational mode – whose self-energy is described by <span class="math notranslate nohighlight">\(\hat{H}_{B}\)</span>. Even when the energy barrier to spin transitions is large (<span class="math notranslate nohighlight">\(\Delta \gg J\)</span>), if also <span class="math notranslate nohighlight">\(\nu_{eff} \approx \Delta\)</span>, then population transfer between the spins can still be achieved by effectively borrowing or storing energy in the coupled vibrational mode. This is the basis of VAET.</p>
+<p>In this notebook, we do a step-by-step walkthrough on how to simulate this effect using IonSim.</p>
+</div>
+<div class="section" id="hat-h-s-s">
+<h2><span class="math notranslate nohighlight">\(\hat{H}_{S-S}\)</span><a class="headerlink" href="#hat-h-s-s" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="engineering-the-spin-spin-coupling-term">
+<h3>Engineering the spin-spin coupling term<a class="headerlink" href="#engineering-the-spin-spin-coupling-term" title="Permalink to this headline">¶</a></h3>
+<p>In the lab, <span class="math notranslate nohighlight">\(\hat{H}_{S-S}\)</span> can be engineered with two laser tones, using a Mølmer-Sørensen type interaction <a class="bibtex reference internal" href="../tutorial-notebooks/getting_started.html#physreva-62-022311" id="id2">[SorensenMolmer00]</a>, as in <a class="reference internal" href="ramped_molmer_sorensen.html"><span class="doc std std-doc">this example</span></a>, but now in the off-resonant limit: <span class="math notranslate nohighlight">\(\eta_i \Omega \ll |\nu_i-\delta|\)</span>, which gives:</p>
+<div class="math notranslate nohighlight" id="equation-spin-spin">
+<span class="eqno">(4)<a class="headerlink" href="#equation-spin-spin" title="Permalink to this equation">¶</a></span>\[
+\hat{H}_{S-S} = \frac{(\eta\Omega)^2}{2(\nu-\delta)} \hat{\sigma}_x^{(1)} \otimes  \hat{\sigma}_x^{(2)}
+\]</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Variable definitions:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ul class="simple">
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\Omega}\)</span>: Characterizes the strength of the ion-light interaction, which we assume to be identical for both lasers.</p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\eta}\)</span>: Denotes the <em>Lamb-Dicke</em> factor, which characterizes the strength with which the laser interaction couples the ion’s motion to its electronic states.</p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\pmb{\delta}\)</span>: The two lasers, with frequencies <span class="math notranslate nohighlight">\(\omega_i\)</span>, are detuned from the ion’s participating electronic transition frequency <span class="math notranslate nohighlight">\(\omega_a\)</span> as <span class="math notranslate nohighlight">\(\omega_i-\omega_a=\pm\delta\)</span>.</p></li>
+</ul>
+</div>
+</details></div>
+<div class="section" id="construct-the-system">
+<h3>Construct the system<a class="headerlink" href="#construct-the-system" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">Ca40</span><span class="p">([</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">])</span>
+<span class="n">L1</span> <span class="o">=</span> <span class="n">Laser</span><span class="p">(</span><span class="n">pointing</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)])</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">Laser</span><span class="p">(</span><span class="n">pointing</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)])</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">LinearChain</span><span class="p">(</span>
+        <span class="n">ions</span><span class="o">=</span><span class="p">[</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">],</span> <span class="n">com_frequencies</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">3e6</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">3e6</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mf">1e6</span><span class="p">),</span> 
+        <span class="n">vibrational_modes</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">z</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="p">)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">Trap</span><span class="p">(</span><span class="n">configuration</span><span class="o">=</span><span class="n">chain</span><span class="p">,</span> <span class="n">B</span><span class="o">=</span><span class="mf">6e-4</span><span class="p">,</span> <span class="n">Bhat</span><span class="o">=</span><span class="p">(</span><span class="n">x̂</span> <span class="o">+</span> <span class="n">ẑ</span><span class="p">)</span><span class="o">/√</span><span class="mi">2</span><span class="p">,</span> <span class="n">lasers</span><span class="o">=</span><span class="p">[</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">])</span>
+
+<span class="n">axial_mode</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">vibrational_modes</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">radial_mode</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">vibrational_modes</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c"># Set Hilbert space dimension for participating vibrational modes</span>
+<span class="n">axial_mode</span><span class="o">.</span><span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">radial_mode</span><span class="o">.</span><span class="n">N</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</div>
+<div class="section" id="set-the-laser-parameters">
+<h3>Set the laser parameters<a class="headerlink" href="#set-the-laser-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Δf</span> <span class="o">=</span> <span class="n">transition_frequency</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">))</span>
+<span class="n">ϵ</span> <span class="o">=</span> <span class="mf">40e3</span>
+
+<span class="n">L1</span><span class="o">.</span><span class="n">Δ</span> <span class="o">=</span> <span class="n">Δf</span> <span class="o">+</span> <span class="n">axial_mode</span><span class="o">.</span><span class="n">ν</span> <span class="o">+</span> <span class="n">ϵ</span> 
+<span class="n">L1</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">ẑ</span>
+<span class="n">L1</span><span class="o">.</span><span class="n">ϵ</span> <span class="o">=</span> <span class="n">x̂</span>
+
+<span class="n">L2</span><span class="o">.</span><span class="n">Δ</span> <span class="o">=</span> <span class="n">Δf</span> <span class="o">-</span> <span class="n">axial_mode</span><span class="o">.</span><span class="n">ν</span> <span class="o">-</span> <span class="n">ϵ</span>
+<span class="n">L2</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">ẑ</span>
+<span class="n">L2</span><span class="o">.</span><span class="n">ϵ</span> <span class="o">=</span> <span class="n">x̂</span>
+
+<span class="n">η</span> <span class="o">=</span> <span class="n">abs</span><span class="p">(</span><span class="n">get_η</span><span class="p">(</span><span class="n">axial_mode</span><span class="p">,</span> <span class="n">L1</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
+<span class="n">Ω</span> <span class="o">=</span> <span class="o">√</span><span class="p">(</span><span class="mf">1e3</span> <span class="o">*</span> <span class="n">ϵ</span><span class="p">)</span> <span class="o">/</span> <span class="n">η</span>  <span class="c"># This will give a 1kHz MS strength, since coupling goes like (ηΩ)^2/ϵ</span>
+
+<span class="n">Efield_from_rabi_frequency!</span><span class="p">(</span><span class="n">Ω</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">))</span>
+<span class="n">Efield_from_rabi_frequency!</span><span class="p">(</span><span class="n">Ω</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="construct-hamiltonian-solve-system">
+<h3>Construct Hamiltonian / Solve system<a class="headerlink" href="#construct-hamiltonian-solve-system" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">lamb_dicke_order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="mf">1e6</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol_res</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span>
+        <span class="mi">0</span><span class="o">:</span><span class="mi">2</span><span class="o">:</span><span class="mi">3000</span><span class="p">,</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;D-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">axial_mode</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">radial_mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">h</span>
+    <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2.063754 seconds (10.22 M allocations: 315.648 MiB, 14.69% gc time)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-results">
+<h3>Plot results<a class="headerlink" href="#plot-results" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">SD_res</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">),</span> <span class="n">sol_res</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">SD_res</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;resonant&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">tout</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">&quot;SD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/two_ion_vaet_17_0.png" src="../_images/two_ion_vaet_17_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hat-h-s-s-hat-h-s">
+<h2><span class="math notranslate nohighlight">\(\hat{H}_{S-S} + \hat{H}_{S}\)</span><a class="headerlink" href="#hat-h-s-s-hat-h-s" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="engineering-the-energy-barrier">
+<h3>Engineering the energy barrier<a class="headerlink" href="#engineering-the-energy-barrier" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(\hat{H}_{S} = \frac{\Delta}{2}  \hat{\sigma}_z^{(2)}\)</span> can be engineered via an AC stark shift, B-field gradient or directly in IonSim with the <code class="docutils literal notranslate"><span class="pre">stark_shift</span></code> field of an <code class="docutils literal notranslate"><span class="pre">Ion</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># We&#39;ll add the barrier term by setting a nonzero value to </span>
+<span class="c"># the trap&#39;s B-field gradient:</span>
+<span class="n">set_gradient!</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">),</span> <span class="o">√</span><span class="mf">5.25</span> <span class="o">*</span> <span class="mf">1e3</span><span class="p">);</span> 
+<span class="c"># ΩMS = 1 kHz, so setting Δ = √5.25 kHz gives Ω&#39; = √(ΩMS^2 + Δ^2) = 2.5 kHz</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Construct Hamiltonian / Solve system<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">lamb_dicke_order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="mf">1e6</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol_det</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span>
+        <span class="mi">0</span><span class="o">:</span><span class="mi">2</span><span class="o">:</span><span class="mi">3000</span><span class="p">,</span> 
+        <span class="n">C</span><span class="p">[</span><span class="s">&quot;D-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">axial_mode</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">radial_mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">h</span>
+    <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1.890591 seconds (9.91 M allocations: 306.016 MiB, 13.12% gc time)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Plot results<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">SD_det</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">),</span> <span class="n">sol_det</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">SD_res</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;resonant&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">SD_det</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;detuned&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">tout</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">&quot;SD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/two_ion_vaet_26_0.png" src="../_images/two_ion_vaet_26_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hat-h-s-s-hat-h-s-hat-h-s-b-hat-h-b">
+<span id="vaet-simulation"></span><h2><span class="math notranslate nohighlight">\(\hat{H}_{S-S} + \hat{H}_{S} + \hat{H}_{S-B} + \hat{H}_{B}\)</span><a class="headerlink" href="#hat-h-s-s-hat-h-s-hat-h-s-b-hat-h-b" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="engineering-the-vibrational-mode-coupling">
+<h3>Engineering the vibrational mode coupling<a class="headerlink" href="#engineering-the-vibrational-mode-coupling" title="Permalink to this headline">¶</a></h3>
+<p>The spin-bath coupling term can be engineered using two additional laser tones, in a way similar to the Mølmer Sørensen interaction, but shining on only a single ion and with the detunings from the carrier transition equal to plus/minus half of the frequency of the coupled vibrational mode <a class="bibtex reference internal" href="#physreva-77-050303" id="id5">[KRA+08]</a>. This gives:</p>
+<div class="math notranslate nohighlight" id="equation-spin-boson">
+<span class="eqno">(5)<a class="headerlink" href="#equation-spin-boson" title="Permalink to this equation">¶</a></span>\[
+\hat{H}_{S-B} = \frac{\eta_i \Omega^2}{2\nu_i}  \hat{\sigma}_z^{(2)} \otimes (\hat{a} + \hat{a}^{\dagger}) + \nu_{eff} \hat{a}^{\dagger}\hat{a}
+\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\Omega, \eta\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> are defined as before, <span class="math notranslate nohighlight">\(\hat{a}\)</span> is the annihilation for the coupled vibrational mode and <span class="math notranslate nohighlight">\(\nu_{eff}\)</span> is controlled by a small asymmetry in the detunings of the two participating lasers (as described in <a class="bibtex reference internal" href="#physrevx-8-011038" id="id6">[GHM+18]</a>).</p>
+<div class="section" id="setup-two-additional-lasers-for-the-s-b-hamiltonian">
+<h4>setup two additional lasers for the S-B Hamiltonian<a class="headerlink" href="#setup-two-additional-lasers-for-the-s-b-hamiltonian" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">L3</span> <span class="o">=</span> <span class="n">Laser</span><span class="p">(</span><span class="n">pointing</span><span class="o">=</span><span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)])</span>
+<span class="n">L4</span> <span class="o">=</span> <span class="n">Laser</span><span class="p">(</span><span class="n">pointing</span><span class="o">=</span><span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)])</span>
+<span class="n">T</span><span class="o">.</span><span class="n">lasers</span> <span class="o">=</span> <span class="p">[</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">,</span> <span class="n">L3</span><span class="p">,</span> <span class="n">L4</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-the-parameters-for-these-new-lasers">
+<h4>Set the parameters for these new lasers<a class="headerlink" href="#set-the-parameters-for-these-new-lasers" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">axial_mode</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">vibrational_modes</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">radial_mode</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">vibrational_modes</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">Δf</span> <span class="o">=</span> <span class="n">transition_frequency</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">))</span>
+<span class="n">νeff</span> <span class="o">=</span> <span class="o">√</span><span class="mf">5.25</span> <span class="o">*</span> <span class="mf">1e3</span>
+
+<span class="c"># We set the effective vibrational frequency by detuning </span>
+<span class="c"># the 2-photon transition off resonance</span>
+<span class="n">L3</span><span class="o">.</span><span class="n">Δ</span> <span class="o">=</span> <span class="n">Δf</span> <span class="o">+</span> <span class="n">radial_mode</span><span class="o">.</span><span class="n">ν</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">νeff</span>  
+<span class="n">L3</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">x̂</span>
+<span class="n">L3</span><span class="o">.</span><span class="n">ϵ</span> <span class="o">=</span> <span class="n">ẑ</span>
+
+<span class="n">L4</span><span class="o">.</span><span class="n">Δ</span> <span class="o">=</span> <span class="n">Δf</span> <span class="o">-</span> <span class="n">radial_mode</span><span class="o">.</span><span class="n">ν</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">L4</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">x̂</span>
+<span class="n">L4</span><span class="o">.</span><span class="n">ϵ</span> <span class="o">=</span> <span class="n">ẑ</span>
+
+<span class="n">η</span> <span class="o">=</span> <span class="n">abs</span><span class="p">(</span><span class="n">get_η</span><span class="p">(</span><span class="n">radial_mode</span><span class="p">,</span> <span class="n">L3</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
+<span class="n">Ω</span> <span class="o">=</span> <span class="o">√</span><span class="p">((</span><span class="mf">0.5e3</span> <span class="o">*</span> <span class="n">radial_mode</span><span class="o">.</span><span class="n">ν</span><span class="p">)</span> <span class="o">/</span> <span class="n">η</span><span class="p">)</span>  <span class="c"># Set κ = 0.5 kHz, since κ = ηΩ^2/ν</span>
+
+<span class="n">Efield_from_rabi_frequency!</span><span class="p">(</span><span class="n">Ω</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">))</span>
+<span class="n">Efield_from_rabi_frequency!</span><span class="p">(</span><span class="n">Ω</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vaet-simulation-solve">
+<span id="id7"></span><h3>Construct Hamiltonian / Solve system<a class="headerlink" href="#vaet-simulation-solve" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">lamb_dicke_order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="mf">1.51e6</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol_vaet</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span>
+        <span class="mi">0</span><span class="o">:</span><span class="mi">2</span><span class="o">:</span><span class="mi">3000</span><span class="p">,</span> 
+        <span class="n">C</span><span class="p">[</span><span class="s">&quot;D-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">axial_mode</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="n">⊗</span> <span class="n">radial_mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">h</span>
+    <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>193.464708 seconds (823.02 M allocations: 29.438 GiB, 11.10% gc time)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Plot results<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">SD_vaet</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">),</span> <span class="n">sol_vaet</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">SD_res</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;resonant&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">SD_det</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;detuned&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span> <span class="n">SD_vaet</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;VAET&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">tout</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">tout</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/two_ion_vaet_38_0.png" src="../_images/two_ion_vaet_38_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-example-notebooks/two_ion_vaet-0"><dl class="citation">
+<dt class="bibtex label" id="physrevx-8-011038"><span class="brackets">GHM+18</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p>Dylan J Gorman, Boerge Hemmerling, Eli Megidish, Soenke A. Moeller, Philipp Schindler, Mohan Sarovar, and Hartmut Haeffner. Engineering vibrationally assisted energy transfer in a trapped-ion quantum simulator. <em>Phys. Rev. X</em>, 8:011038, Mar 2018. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevX.8.011038">https://link.aps.org/doi/10.1103/PhysRevX.8.011038</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevX.8.011038">doi:10.1103/PhysRevX.8.011038</a>.</p>
+</dd>
+<dt class="bibtex label" id="physreva-77-050303"><span class="brackets"><a class="fn-backref" href="#id5">KRA+08</a></span></dt>
+<dd><p>K. Kim, C. F. Roos, L. Aolita, H. Häffner, V. Nebendahl, and R. Blatt. Geometric phase gate on an optical transition for ion trap quantum computation. <em>Phys. Rev. A</em>, 77:050303, May 2008. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevA.77.050303">https://link.aps.org/doi/10.1103/PhysRevA.77.050303</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevA.77.050303">doi:10.1103/PhysRevA.77.050303</a>.</p>
+</dd>
+<dt class="bibtex label" id="physreva-62-022311"><span class="brackets"><a class="fn-backref" href="#id2">SorensenMolmer00</a></span></dt>
+<dd><p>Anders Sørensen and Klaus Mølmer. Entanglement and quantum computation with ions in thermal motion. <em>Phys. Rev. A</em>, 62:022311, Jul 2000. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevA.62.022311">https://link.aps.org/doi/10.1103/PhysRevA.62.022311</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevA.62.022311">doi:10.1103/PhysRevA.62.022311</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "HaeffnerLab/IonSim.jl-Examples",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.4"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.4",
+            path: "./example-notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.4'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="ramped_molmer_sorensen.html" title="previous page">Ramped Mølmer-Sørensen</a>
+    <a class='right-next' id="next-link" href="multi-mode_interactions.html" title="next page">Ion-laser interactions mediated by multiple vibrational modes</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
