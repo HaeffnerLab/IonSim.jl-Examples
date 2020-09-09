@@ -770,7 +770,7 @@ mode.N = 1
 
 # construct a zero operator
 L.E = 0
-T.δB = 5e-2
+T.δB = 0.1
 h = hamiltonian(T)
 
 # let's work with a Δm=2 transition
@@ -810,18 +810,18 @@ We can compare the same magnitude of B-field fluctuations for a white PSD. We co
 rates = 1/4π .* abs.([γ1, γ2])
 hs1 = C["S-1/2"] ⊗ C["S-1/2"]' ⊗ one(mode)
 hs2 = C["D-5/2"] ⊗ C["D-5/2"]' ⊗ one(mode)
-tspan = collect(0:1.:15000)
+tspan = collect(0:1.:30000)
 tout, sol = timeevolution.master(tspan, dm(ψi), h(1.0, 0.0), [hs1, hs2], rates=rates);
 
 γ1 = hs(1.0, 0).data[1, 1]/40
 γ2 = hs(1.0, 0).data[2, 2]/40
 
-rates = 1e6/4π .* abs.([γ1, γ2])
+rates = 1/4π .* abs.([γ1, γ2])
 
 hs1 = C["S-1/2"] ⊗ C["S-1/2"]' ⊗ one(mode)
 hs2 = C["D-5/2"] ⊗ C["D-5/2"]' ⊗ one(mode)
 
-tspan = collect(0:1.:15000)
+tspan = collect(0:1.:30000)
 @time tout, sol = timeevolution.master(tspan, dm(ψi), h(1.0, 0.0), [hs1, hs2], rates=rates)
 
 ex = expect(dm(ψi_ion) ⊗ one(mode), sol)
@@ -837,22 +837,66 @@ A brute force way to include shot-to-shot noise on a simulated parameter is to j
 As an example, we consider fluctuations of the laser's electric field $E$ such that  $E \sim \mathcal{N}(\bar{E}, \delta E^2)$, then we should expect a Gaussian decay profile $e^{-t^2 / 2\tau^2}$ with: $1/\tau = \delta E\bigg(\frac{\partial\omega}{\partial E}\bigg)$.
 
 T.configuration.ions[1].selected_level_structure = ["S-1/2", "D-1/2"]
+T.B = 4e-4
+T.δB = 0
 
 # recompute the transition frequency
 Δf = transition_frequency(T, 1, ("S-1/2", "D-1/2"))
 L.Δ = Δf
 
-T.B = 4e-4
-T.δB = 0
 E = Efield_from_pi_time(2e-6, T, 1, 1, ("S-1/2", "D-1/2"))
-L.Δ = Δf
 tspan = 0:0.1:60
 
 # average over Ntraj runs
-Ntraj = 500
+Ntraj = 1000
 δE = 0.025E
 ex = zero(tspan)
-ψi = ionstate(T, "S-1/2") ⊗ fockstate(mode, 0)
+ψi = C["S-1/2"] ⊗ mode[0]
+@time begin
+    for i in 1:Ntraj
+        ΔE = δE * randn()
+        L.E = E + ΔE 
+        h = hamiltonian(T)
+        tout, sol = timeevolution.schroedinger_dynamic(tspan, ψi, h)
+        ex .+= expect(ionprojector(T, "D-1/2"), sol) ./ Ntraj
+    end
+end
+
+# compute expected τ
+hz_per_E = 1 / Efield_from_rabi_frequency(1, ẑ, L, C, ("S-1/2", "D-1/2"))
+τ_us = 1e6 / (2π * δE * hz_per_E)
+
+plt.plot(tspan, ex)
+plt.plot(
+        tspan, @.((1 + exp(-(tspan / (√2 * τ_us))^2))/2), 
+        color="C1", ls="--", label="Gaussian Envelope"
+    )
+plt.plot(
+        tspan, @.((1 - exp(-(tspan / (√2 * τ_us))^2))/2), 
+        color="C1", ls="--"
+    )
+plt.xlim(tspan[1], tspan[end])
+plt.ylim(0, 1)
+plt.legend()
+plt.ylabel("Excitation")
+plt.xlabel("Time (μs)");
+
+T.configuration.ions[1].selected_level_structure = ["S-1/2", "D-1/2"]
+T.B = 4e-4
+T.δB = 0
+
+# recompute the transition frequency
+Δf = transition_frequency(T, 1, ("S-1/2", "D-1/2"))
+L.Δ = Δf
+
+E = Efield_from_pi_time(2e-6, T, 1, 1, ("S-1/2", "D-1/2"))
+tspan = 0:0.1:60
+
+# average over Ntraj runs
+Ntraj = 1000
+δE = 0.025E
+ex = zero(tspan)
+ψi = C["S-1/2"] ⊗ mode[0]
 @time begin
     for i in 1:Ntraj
         ΔE = δE * randn()
