@@ -1,2 +1,3 @@
 not-included/*
 _build/*
+.ipynb_checkpoints
