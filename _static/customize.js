@@ -3,6 +3,7 @@ $(document).ready(function() {
     // Point the IonSim logo to ionsim.org
 //     var logolink = document.querySelector('img.logo').parentElement;
 //     logolink.href = 'https://www.ionsim.org';
+    $('meta[property=og\\:image]').attr('content', 'https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png');
 
     // Remove 'this book' from searchbar placeholder
     $('#search-input').attr('placeholder', 'search examples...');
