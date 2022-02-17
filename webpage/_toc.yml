@@ -1,6 +1,6 @@
 root: intro
 format: jb-book
-parts:
+chapters:
 - file: example-notebooks/multi-mode_interactions
   sections:
   - file: example-notebooks/two_ion_vaet
