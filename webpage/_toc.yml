@@ -1,15 +1,8 @@
-- file: intro
-
-- part: Tutorials
-  chapters:
-    - file: tutorial-notebooks/getting_started
-
-- part: Examples
-  chapters:
-    - file: example-notebooks/ramped_molmer_sorensen
-    - file: example-notebooks/two_ion_vaet
-    - file: example-notebooks/multi-mode_interactions
-
-- part: Learn
-  chapters:
-    - file: learn-notebooks/coming_soon
+file: intro
+sections:
+- file: example-notebooks/multi-mode_interactions
+  sections:
+  - file: example-notebooks/two_ion_vaet
+  - file: example-notebooks/ramped_molmer_sorensen
+- file: learn-notebooks/coming_soon
+- file: tutorial-notebooks/getting_started
