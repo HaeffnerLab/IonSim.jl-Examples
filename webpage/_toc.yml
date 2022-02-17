@@ -1,4 +1,5 @@
-file: intro
+root: intro
+format: jb-book
 sections:
 - file: example-notebooks/multi-mode_interactions
   sections:
