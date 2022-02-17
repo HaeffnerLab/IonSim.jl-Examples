@@ -1,8 +1,8 @@
 // This script is a hacky way to make some small html customizations to the book
 $(document).ready(function() {
     // Point the IonSim logo to ionsim.org
-    var logolink = document.querySelector('img.logo').parentElement;
-    logolink.href = 'https://www.ionsim.org';
+//     var logolink = document.querySelector('img.logo').parentElement;
+//     logolink.href = 'https://www.ionsim.org';
 
     // Remove 'this book' from searchbar placeholder
     $('#search-input').attr('placeholder', 'search examples...');
