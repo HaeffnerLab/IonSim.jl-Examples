@@ -22,6 +22,7 @@ html:
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: true
+  favicon:  "https://github.com/HaeffnerLab/IonSim.jl-Examples/blob/master/webpage/logo.svg"
 
 sphinx:
   config:
