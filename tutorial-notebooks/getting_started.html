@@ -8,7 +8,7 @@
   <meta property="og:title" content="Getting started with IonSim" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://examples.ionsim.org/tutorial-notebooks/getting_started.html" />
-  <meta property="og:description" content="What does IonSim do?: IonSim is built on top of QuantumOptics.jl kramer2018quantumoptics and is primarily intended to simulate the following general system: A laser shining on a linear chain of tra..." />
+  <meta property="og:description" content="What does IonSim do?: IonSim is built on top of QuantumOptics.jl:cite:p:`kramer2018quantumoptics` and is primarily intended to simulate the following general system: A laser shining on a linear cha..." />
   <meta property="og:image" content="https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png" />
   <meta property="og:image:alt" content="Getting started with IonSim" />
   
@@ -408,7 +408,7 @@
 <h1>Getting started with IonSim<a class="headerlink" href="#getting-started-with-ionsim" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-does-ionsim-do">
 <h2>What does IonSim do?<a class="headerlink" href="#what-does-ionsim-do" title="Permalink to this headline">¶</a></h2>
-<p>IonSim is built on top of <a class="reference external" href="https://qojulia.org/">QuantumOptics.jl</a><span class="xref std std-ref">kramer2018quantumoptics</span> and is primarily intended to simulate the following general system:</p>
+<p>IonSim is built on top of <a class="reference external" href="https://qojulia.org/">QuantumOptics.jl</a><a href="#id1"><span class="problematic" id="id2">:cite:p:`kramer2018quantumoptics`</span></a> and is primarily intended to simulate the following general system:</p>
 <div class="figure align-default" id="linear-chain-image">
 <a class="reference internal image-reference" href="../_images/trapped_ion_system.png"><img alt="../_images/trapped_ion_system.png" src="../_images/trapped_ion_system.png" style="width: 700px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">A laser shining on a linear chain of trapped ions.</span><a class="headerlink" href="#linear-chain-image" title="Permalink to this image">¶</a></p>
@@ -1263,7 +1263,7 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <p>Even with just a 1 μs ramp, we already see noticeable reduction of the fast oscillations.</p>
-<p>As an applied example of a time-dependent laser frequency, we can simulate Rapid Adiabatic Passage or RAP <span class="xref std std-ref">rap</span>, which can be used for robust preparation of the ion in an excited state.</p>
+<p>As an applied example of a time-dependent laser frequency, we can simulate Rapid Adiabatic Passage or RAP <a href="#id3"><span class="problematic" id="id4">:cite:p:`rap`</span></a>, which can be used for robust preparation of the ion in an excited state.</p>
 <hr class="docutils" />
 <p>We’ll linearly sweep through the laser’s frequency from -150 kHz to +150 kHz detuned from the carrier transition
 in a time <code class="docutils literal notranslate"><span class="pre">Tp</span></code></p>
@@ -1599,7 +1599,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 <div class="section" id="adding-more-than-a-single-ion-laser">
 <h3>Adding more than a single ion/ laser<a class="headerlink" href="#adding-more-than-a-single-ion-laser" title="Permalink to this headline">¶</a></h3>
-<p>Adding addtional lasers and ions to the system is straightforward. Here we’ll see how that’s done by modeling a Mølmer-Sørensen interaction <span class="xref std std-ref">PhysRevA.62.022311</span>, which can be used to entangle the electronic states of multiple ions and requires at least two laser tones and vibrational mode.</p>
+<p>Adding addtional lasers and ions to the system is straightforward. Here we’ll see how that’s done by modeling a Mølmer-Sørensen interaction <a href="#id5"><span class="problematic" id="id6">:cite:p:`PhysRevA.62.022311`</span></a>, which can be used to entangle the electronic states of multiple ions and requires at least two laser tones and vibrational mode.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># Construct the system</span>
