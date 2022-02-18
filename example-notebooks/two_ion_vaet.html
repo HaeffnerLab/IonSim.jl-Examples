@@ -110,6 +110,11 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial-notebooks/getting_started.html">
+   Getting started with IonSim
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="multi-mode_interactions.html">
    Ion-laser interactions mediated by multiple vibrational modes
@@ -135,11 +140,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../learn-notebooks/coming_soon.html">
    Coming Soon
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../tutorial-notebooks/getting_started.html">
-   Getting started with IonSim
   </a>
  </li>
 </ul>
@@ -520,7 +520,7 @@
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p>In <a href="#id1"><span class="problematic" id="id2">:cite:`PhysRevX.8.011038`</span></a> it is demonstrated that two ions in a Paul trap can be used to simulate the following Hamiltonian:</p>
 <div class="math notranslate nohighlight" id="equation-vaet-hamiltonian">
-<span class="eqno">(1)<a class="headerlink" href="#equation-vaet-hamiltonian" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(2)<a class="headerlink" href="#equation-vaet-hamiltonian" title="Permalink to this equation">¶</a></span>\[
 {
 \hat{H} = \underbrace{\frac{J}{2} \hat{\sigma}_x^{(1)} \otimes  \hat{\sigma}_x^{(2)}}_{\hat{H}_{S-S}} + \underbrace{\frac{\Delta}{2}  \hat{\sigma}_z^{(2)}}_{\hat{H}_{S}} + 
 \underbrace{\frac{\kappa}{2}  \hat{\sigma}_z^{(2)} \otimes (\hat{a} + \hat{a}^{\dagger})}_{\hat{H}_{S-B}} + 
@@ -539,7 +539,7 @@
 <h3>Engineering the spin-spin coupling term<a class="headerlink" href="#engineering-the-spin-spin-coupling-term" title="Permalink to this headline">¶</a></h3>
 <p>In the lab, <span class="math notranslate nohighlight">\(\hat{H}_{S-S}\)</span> can be engineered with two laser tones, using a Mølmer-Sørensen type interaction <a href="#id3"><span class="problematic" id="id4">:cite:`PhysRevA.62.022311`</span></a>, as in <a class="reference internal" href="ramped_molmer_sorensen.html"><span class="doc std std-doc">this example</span></a>, but now in the off-resonant limit: <span class="math notranslate nohighlight">\(\eta_i \Omega \ll |\nu_i-\delta|\)</span>, which gives:</p>
 <div class="math notranslate nohighlight" id="equation-spin-spin">
-<span class="eqno">(2)<a class="headerlink" href="#equation-spin-spin" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(3)<a class="headerlink" href="#equation-spin-spin" title="Permalink to this equation">¶</a></span>\[
 \hat{H}_{S-S} = \frac{(\eta\Omega)^2}{2(\nu-\delta)} \hat{\sigma}_x^{(1)} \otimes  \hat{\sigma}_x^{(2)}
 \]</div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -721,7 +721,7 @@ Variable definitions:<div class="summary-down docutils">
 <h3>Engineering the vibrational mode coupling<a class="headerlink" href="#engineering-the-vibrational-mode-coupling" title="Permalink to this headline">¶</a></h3>
 <p>The spin-bath coupling term can be engineered using two additional laser tones, in a way similar to the Mølmer Sørensen interaction, but shining on only a single ion and with the detunings from the carrier transition equal to plus/minus half of the frequency of the coupled vibrational mode <a href="#id7"><span class="problematic" id="id8">:cite:`PhysRevA.77.050303`</span></a>. This gives:</p>
 <div class="math notranslate nohighlight" id="equation-spin-boson">
-<span class="eqno">(3)<a class="headerlink" href="#equation-spin-boson" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(4)<a class="headerlink" href="#equation-spin-boson" title="Permalink to this equation">¶</a></span>\[
 \hat{H}_{S-B} = \frac{\eta_i \Omega^2}{2\nu_i}  \hat{\sigma}_z^{(2)} \otimes (\hat{a} + \hat{a}^{\dagger}) + \nu_{eff} \hat{a}^{\dagger}\hat{a}
 \]</div>
 <p>Here <span class="math notranslate nohighlight">\(\Omega, \eta\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> are defined as before, <span class="math notranslate nohighlight">\(\hat{a}\)</span> is the annihilation for the coupled vibrational mode and <span class="math notranslate nohighlight">\(\nu_{eff}\)</span> is controlled by a small asymmetry in the detunings of the two participating lasers (as described in <a href="#id9"><span class="problematic" id="id10">:cite:`PhysRevX.8.011038`</span></a>).</p>
