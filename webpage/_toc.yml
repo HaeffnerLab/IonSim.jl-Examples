@@ -1,12 +1,12 @@
-root: intro
 format: jb-book
+root: intro
 parts:
-  -caption: Getting Started
+  - caption: Getting Started
     chapters:
     - file: tutorial-notebooks/getting_started
-  -caption: Examples
+  - caption: Examples
     chapters:
     - file: example-notebooks/multi-mode_interactions
     - file: example-notebooks/two_ion_vaet
     - file: example-notebooks/ramped_molmer_sorensen
-   -caption: Learn (coming soon)
+   - caption: Learn (coming soon)
