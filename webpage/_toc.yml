@@ -10,3 +10,4 @@ parts:
     - file: example-notebooks/two_ion_vaet
     - file: example-notebooks/ramped_molmer_sorensen
   - caption: Learn (coming soon)
+    chapters:
