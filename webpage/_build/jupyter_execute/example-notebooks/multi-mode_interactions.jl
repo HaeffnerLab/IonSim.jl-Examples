@@ -1,5 +1,3 @@
-# Ion-laser interactions mediated by multiple vibrational modes
-
 using QuantumOptics
 using IonSim
 using DSP: periodogram
@@ -17,14 +15,6 @@ plt.matplotlib.rc("font", family="Palatino", weight="medium")
 plt.matplotlib.rc("figure", figsize=(8,4))
 plt.matplotlib.rc("xtick.major", width=2)
 plt.matplotlib.rc("ytick.major", width=2)
-
-## Introduction
-
-In this notebook we will demonstrate that the simulation correctly models laser-mediated interactions between different vibrational modes in a linear chain of ions.
-
-We consider a system consisting of a two-level ion, an axial vibrational mode, a radial vibrational mode and a laser.
-
-## Construct the system
 
 # Setup system
 C = Ca40(["S-1/2","D-1/2"])
@@ -53,12 +43,6 @@ axial.N = 8; radial.N = 8
 ρᵢ_radial = thermalstate(radial, 0.5)
 # Set initial state to ρᵢ = |↓, n̄ᵣ=0.5, n̄ₐ=0.5⟩
 ρᵢ = ρᵢ_ion ⊗ ρᵢ_radial ⊗ ρᵢ_axial;  
-
-## Measure ion spectrum
-
-```{warning}
-Running this scan takes a while.
-```
 
 tspan = 0:10:400
 fout(t, ρ) = real(expect(ionprojector(T, "D-1/2"), ρ))
@@ -89,10 +73,6 @@ plt.xlabel("Detuning relative to carrier (MHz)")
 plt.ylabel("Excitation")
 plt.show()
 
-## Single phonon interactions
-
-Now we drive the first-order blue axial sideband of the carrier transition and compare the results for an initial vibrational state of |↓, n̄ᵣ=0, n̄ₐ=1.5⟩ versus |↓, n̄ᵣ=1.5, n̄ₐ=0⟩.
-
 # set carrier transition Rabi frequency to 1 MHz
 Efield_from_rabi_frequency!(1e6, T, 1, 1, ("S-1/2","D-1/2"))
 tspan = 0:0.25:800
@@ -122,12 +102,6 @@ plt.xlim(0, tout[end])
 plt.xlabel("Time (μs)")
 plt.show()
 
-We see (blue curve) that, when the axial mode begins in a thermal state with mean occupation of 1.5 quanta, the oscillations exhibit a large spectral content -- since the coupling strength of the sideband transition depends strongly on the occupation of the mode. The dotted orange curve is the theoretical prediction.
-
-On the other hand, when the axial mode begins in its ground state but the radial mode begins in a thermal state with mean occupation 1.5 quanta, we see (green curve) that the dominant effect is a slow decay. To first order, this is described by an n-dependent dispersive shift of the axial sideband transition due to off-resonant interaction with the radial mode.
-
-If we instead drive the radial sideband, we produce analogous results: 
-
 tspan = 0:0.25:800
 L.Δ = ωc + radial.ν
 h = hamiltonian(T, rwa_cutoff=1e4)
@@ -152,12 +126,6 @@ plt.ylim(0, 1)
 plt.xlim(0, tout[end])
 plt.xlabel("Time (μs)")
 plt.show()
-
-The main difference between this and the previous plot (aside from the role-reversal of the vibrational modes) is that the coupling strengths are all scaled down since the Lamb Dicke factor for the radial mode is smaller (η ∝ 1/√ν).
-
-## Two phonon interactions
-
-Finally, we set the laser detuning equal to the carrier transition plus the sum of the two trap frequencies. In this case, we drive a second-order sideband transition that involves simultaneously increasing the occupation numbers of both modes by one quanta.
 
 fout(t, ρ) = real(expect(ionprojector(T, "D-1/2"), ρ));
 
@@ -193,10 +161,6 @@ plt.ylim(0, 1)
 plt.xlim(0, tout[10000])
 plt.xlabel("Time (μs)")
 plt.show()
-
-In this case the results for ρᵢ = |↓, n̄ᵣ=0, n̄ₐ=1.5⟩ and  ρᵢ = |↓, n̄ᵣ=1.5, n̄ₐ=0⟩ are very similar and ρᵢ = |↓, n̄ᵣ=1.5, n̄ₐ=1.5⟩ is significantly different. 
-
-It's illustrative to look at these results in frequency space:
 
 ηᵣ = get_η(radial, L, C)
 ηₐ = get_η(axial, L, C)
@@ -245,10 +209,6 @@ plt.xlabel("Frequency [2π/Ω_carrier]")
 plt.ylabel("Spectral Weights [abu]")
 plt.legend(loc=1)
 plt.show()
-
-## lamb_dicke_order as a vector
-
-As a final note we mention that, when more than one vibrational mode is present in the simulation, we can indepently set the order of the Lamb-Dicke approximation for each mode by inputing a vector `V` to the keyword argument `lamb_dicke_order` in the `hamiltonian` function. In this case, `typeof(V) ≡ Vector{<:Int}` and the length of `V` must be equal to the number of modes.
 
 tspan = 0:5:1000
 ρᵢ_axial = thermalstate(axial, 0)
