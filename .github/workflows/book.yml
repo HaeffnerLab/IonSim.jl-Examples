@@ -43,7 +43,7 @@ jobs:
         jupyter-book build webpage
 
     - name: Add CNAME
-      run: echo "docs.ionsim.org" > CNAME
+      run: echo "docs.ionsim.org" > ./webpage/_build/html/CNAME
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
