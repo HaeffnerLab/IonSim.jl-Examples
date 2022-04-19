@@ -370,25 +370,21 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Failed</span> <span class="n">to</span> <span class="n">precompile</span> <span class="n">QuantumOptics</span> <span class="p">[</span><span class="mf">6e0679</span><span class="n">c1</span><span class="o">-</span><span class="mi">51</span><span class="n">ea</span><span class="o">-</span><span class="mi">5</span><span class="n">a7c</span><span class="o">-</span><span class="n">ac74</span><span class="o">-</span><span class="n">d61b76210b0c</span><span class="p">]</span> <span class="n">to</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">compiled</span><span class="o">/</span><span class="n">v1</span><span class="mf">.6</span><span class="o">/</span><span class="n">QuantumOptics</span><span class="o">/</span><span class="n">jl_VEXtH9</span><span class="o">.</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>ArgumentError: Package DSP [717857b8-e6f2-59f4-9121-6e50c889abd2] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
 
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(</span><span class="n">s</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">internal_stderr</span><span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">IJuliaStdio</span><span class="p">{</span><span class="n">Base</span><span class="o">.</span><span class="n">PipeEndpoint</span><span class="p">},</span> <span class="n">internal_stdout</span><span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">IJuliaStdio</span><span class="p">{</span><span class="n">Base</span><span class="o">.</span><span class="n">PipeEndpoint</span><span class="p">},</span> <span class="n">ignore_loaded_modules</span><span class="p">::</span><span class="n">Bool</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1385</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1329</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">_require</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1043</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">uuidkey</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">936</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">into</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">mod</span><span class="p">::</span><span class="n">Symbol</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">923</span>
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+
+Stacktrace:
+ [1] _require(pkg::Base.PkgId)
+   @ Base ./loading.jl:1012
+ [2] require(uuidkey::Base.PkgId)
+   @ Base ./loading.jl:936
+ [3] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:923
+ [4] eval
+   @ ./boot.jl:360 [inlined]
+ [5] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1116
 </pre></div>
 </div>
 </div>
@@ -450,17 +446,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Ca40 not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -476,19 +461,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">ρᵢ_radial</span> <span class="o">=</span> <span class="n">thermalstate</span><span class="p">(</span><span class="n">radial</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="c"># Set initial state to ρᵢ = |↓, n̄ᵣ=0.5, n̄ₐ=0.5⟩</span>
 <span class="n">ρᵢ</span> <span class="o">=</span> <span class="n">ρᵢ_ion</span> <span class="o">⊗</span> <span class="n">ρᵢ_radial</span> <span class="o">⊗</span> <span class="n">ρᵢ_axial</span><span class="p">;</span>  
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -517,19 +489,6 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="n">_</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">master_dynamic</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">ρᵢ</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ρ</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ρ</span><span class="p">),</span> <span class="p">[</span><span class="n">J</span><span class="p">],</span> <span class="p">[</span><span class="n">J</span><span class="p">],</span> <span class="p">[</span><span class="n">γ</span><span class="p">]),</span> <span class="n">fout</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
     <span class="n">push!</span><span class="p">(</span><span class="n">exclist</span><span class="p">,</span> <span class="n">real</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="k">end</span><span class="p">]))</span>
 <span class="k">end</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: C not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span><span class="mi">3</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -593,19 +552,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Efield_from_rabi_frequency! not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -654,19 +600,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">ρᵢ_radial</span> <span class="o">=</span> <span class="n">thermalstate</span><span class="p">(</span><span class="n">radial</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
 <span class="n">ρᵢ</span> <span class="o">=</span> <span class="n">ρᵢ_ion</span> <span class="o">⊗</span> <span class="n">ρᵢ_radial</span> <span class="o">⊗</span> <span class="n">ρᵢ_axial</span>  
 <span class="n">tout</span><span class="p">,</span> <span class="n">sol_rad</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">ρᵢ</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">fout</span><span class="o">=</span><span class="n">fout</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: radial not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -735,19 +668,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">ρᵢ_radial</span> <span class="o">=</span> <span class="n">thermalstate</span><span class="p">(</span><span class="n">radial</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
 <span class="n">ρᵢ</span> <span class="o">=</span> <span class="n">ρᵢ_ion</span> <span class="o">⊗</span> <span class="n">ρᵢ_radial</span> <span class="o">⊗</span> <span class="n">ρᵢ_axial</span>  
 <span class="n">tout</span><span class="p">,</span> <span class="n">sol_ax_rad</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">ρᵢ</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">fout</span><span class="o">=</span><span class="n">fout</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: axial not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -834,11 +754,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: get_η not defined
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: periodogram not defined
 
 <span class="ne">Stacktrace</span>:
  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">1</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">6</span>
  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
    <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
  <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
@@ -881,19 +801,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">L</span><span class="o">.</span><span class="n">Δ</span> <span class="o">=</span> <span class="n">ωc</span> <span class="o">+</span> <span class="n">radial</span><span class="o">.</span><span class="n">ν</span> <span class="o">+</span> <span class="n">axial</span><span class="o">.</span><span class="n">ν</span>  <span class="c"># Set detuning to axial + radial sideband</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="mf">1e4</span><span class="p">,</span> <span class="n">lamb_dicke_order</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="n">tout</span><span class="p">,</span> <span class="n">sol_rad_axr</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">ρᵢ</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">fout</span><span class="o">=</span><span class="n">fout</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: thermalstate not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>

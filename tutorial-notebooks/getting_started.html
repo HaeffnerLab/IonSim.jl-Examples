@@ -426,29 +426,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Failed</span> <span class="n">to</span> <span class="n">precompile</span> <span class="n">IonSim</span> <span class="p">[</span><span class="mf">511e77</span><span class="n">fe</span><span class="o">-</span><span class="n">ab93</span><span class="o">-</span><span class="mi">41</span><span class="n">f7</span><span class="o">-</span><span class="mi">8</span><span class="n">f07</span><span class="o">-</span><span class="mi">8</span><span class="n">f89809c6435</span><span class="p">]</span> <span class="n">to</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">compiled</span><span class="o">/</span><span class="n">v1</span><span class="mf">.6</span><span class="o">/</span><span class="n">IonSim</span><span class="o">/</span><span class="n">jl_TDjVKu</span><span class="o">.</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(</span><span class="n">s</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">internal_stderr</span><span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">IJuliaStdio</span><span class="p">{</span><span class="n">Base</span><span class="o">.</span><span class="n">PipeEndpoint</span><span class="p">},</span> <span class="n">internal_stdout</span><span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">IJuliaStdio</span><span class="p">{</span><span class="n">Base</span><span class="o">.</span><span class="n">PipeEndpoint</span><span class="p">},</span> <span class="n">ignore_loaded_modules</span><span class="p">::</span><span class="n">Bool</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1385</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1329</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">_require</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1043</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">uuidkey</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">936</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">into</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">mod</span><span class="p">::</span><span class="n">Symbol</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">923</span>
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="getting-started-with-ionsim">
 <h1>Getting started with IonSim<a class="headerlink" href="#getting-started-with-ionsim" title="Permalink to this headline">¶</a></h1>
@@ -521,29 +498,6 @@ Variable definitions:<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Failed</span> <span class="n">to</span> <span class="n">precompile</span> <span class="n">IonSim</span> <span class="p">[</span><span class="mf">511e77</span><span class="n">fe</span><span class="o">-</span><span class="n">ab93</span><span class="o">-</span><span class="mi">41</span><span class="n">f7</span><span class="o">-</span><span class="mi">8</span><span class="n">f07</span><span class="o">-</span><span class="mi">8</span><span class="n">f89809c6435</span><span class="p">]</span> <span class="n">to</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">compiled</span><span class="o">/</span><span class="n">v1</span><span class="mf">.6</span><span class="o">/</span><span class="n">IonSim</span><span class="o">/</span><span class="n">jl_yRozXt</span><span class="o">.</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(</span><span class="n">s</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">internal_stderr</span><span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">IJuliaStdio</span><span class="p">{</span><span class="n">Base</span><span class="o">.</span><span class="n">PipeEndpoint</span><span class="p">},</span> <span class="n">internal_stdout</span><span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">IJuliaStdio</span><span class="p">{</span><span class="n">Base</span><span class="o">.</span><span class="n">PipeEndpoint</span><span class="p">},</span> <span class="n">ignore_loaded_modules</span><span class="p">::</span><span class="n">Bool</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1385</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1329</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">_require</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1043</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">uuidkey</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">936</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">into</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">mod</span><span class="p">::</span><span class="n">Symbol</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">923</span>
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -554,45 +508,6 @@ Variable definitions:<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>expected package `IonSim [511e77fe]` to exist at path `/home/runner/.julia/packages/IonSim/fbKtL`
-
-Stacktrace:
-  [1] pkgerror(msg::String)
-    @ Pkg.Types /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/Types.jl:55
-  [2] collect_fixed!(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}, names::Dict{Base.UUID, String})
-    @ Pkg.Operations /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/Operations.jl:327
-  [3] resolve_versions!(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec})
-    @ Pkg.Operations /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/Operations.jl:386
-  [4] targeted_resolve(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}, preserve::Pkg.Types.PreserveLevel)
-    @ Pkg.Operations /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/Operations.jl:1229
-  [5] tiered_resolve(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec})
-    @ Pkg.Operations /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/Operations.jl:1201
-  [6] _resolve
-    @ /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/Operations.jl:1235 [inlined]
-  [7] add(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}, new_git::Vector{Base.UUID}; preserve::Pkg.Types.PreserveLevel, platform::Base.BinaryPlatforms.Platform)
-    @ Pkg.Operations /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/Operations.jl:1250
-  [8] add(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}; preserve::Pkg.Types.PreserveLevel, platform::Base.BinaryPlatforms.Platform, kwargs::Base.Iterators.Pairs{Symbol, IJulia.IJuliaStdio{Base.PipeEndpoint}, Tuple{Symbol}, NamedTuple{(:io,), Tuple{IJulia.IJuliaStdio{Base.PipeEndpoint}}}})
-    @ Pkg.API /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/API.jl:204
-  [9] add(pkgs::Vector{Pkg.Types.PackageSpec}; io::IJulia.IJuliaStdio{Base.PipeEndpoint}, kwargs::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
-    @ Pkg.API /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/API.jl:80
- [10] add(pkgs::Vector{Pkg.Types.PackageSpec})
-    @ Pkg.API /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/API.jl:78
- [11] #add#23
-    @ /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/API.jl:76 [inlined]
- [12] add
-    @ /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/API.jl:76 [inlined]
- [13] #add#22
-    @ /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/API.jl:75 [inlined]
- [14] add(pkg::String)
-    @ Pkg.API /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/Pkg/src/API.jl:75
- [15] top-level scope
-    @ In[3]:2
- [16] eval
-    @ ./boot.jl:360 [inlined]
- [17] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
-    @ Base ./loading.jl:1116
-</pre></div>
-</div>
 </div>
 </div>
 <p>We’ll also load PyPlot (an interface to Python’s matplotlib), which we’ll need later</p>
@@ -602,8 +517,6 @@ Stacktrace:
 <span class="k">const</span> <span class="n">plt</span> <span class="o">=</span> <span class="n">PyPlot</span><span class="p">;</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -634,15 +547,7 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Ca40 not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>true
 </pre></div>
 </div>
 </div>
@@ -716,15 +621,14 @@ physical position in meters.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Laser not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>λ: 7.29147e-7 m
+Δ: 0 Hz
+ϵ̂: (x=0.7071067811865475, y=0.7071067811865475, z=0.0)
+k̂: (z=0, y=0, z=1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E(t=0): 0 V/m
+ϕ(t=0): 0 ⋅ 2π
 </pre></div>
 </div>
 </div>
@@ -742,15 +646,7 @@ physical position in meters.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: C not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>true
 </pre></div>
 </div>
 </div>
@@ -763,15 +659,7 @@ physical position in meters.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: chain not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(x = VibrationalMode[], y = VibrationalMode[], z = VibrationalMode[VibrationalMode(ν=1.0e6, axis=ẑ, N=10)])
 </pre></div>
 </div>
 </div>
@@ -797,19 +685,6 @@ physical position in meters.</p></li>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <p>A <code class="docutils literal notranslate"><span class="pre">Trap</span></code> specifically associates an <code class="docutils literal notranslate"><span class="pre">IonConifiguration</span></code> and a set of lasers. It keeps track of which lasers point at which ions and with how much scaled strength (to model e.g. crosstalk). It also keeps track of the magnetic field. In this case we’ve set the magnetic field to have a strength of 4 Gauss and to point in the ẑ-direction. δB can be used to model a time-dependent magnetic field, which for example, might be useful to model noise – for now we set it to 0.</p>
 <div class="admonition note">
@@ -831,17 +706,6 @@ physical position in meters.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: x̂ not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
 </div>
 </div>
 <p>Since the nonzero magnitude of the Bfield has shifted the Zeeman sublevels we also need to detune the laser. We can do this with the help of the convenience function <code class="docutils literal notranslate"><span class="pre">transition_frequency</span></code>.</p>
@@ -857,15 +721,7 @@ physical position in meters.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: transition_frequency not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.239399193848153e6
 </pre></div>
 </div>
 </div>
@@ -909,19 +765,6 @@ Alternatively, one may use:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Efield_from_pi_time!</span><span class="p">(</span><span class="mf">2e-6</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">));</span>  <span class="c"># Sets pi_time to 2 μs</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Efield_from_pi_time! not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -1006,19 +849,6 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: hamiltonian not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <p>Now we can take <code class="docutils literal notranslate"><span class="pre">h</span></code> and feed it into one of the <a class="reference external" href="https://qojulia.org/documentation/timeevolution/timeevolution/"><code class="docutils literal notranslate"><span class="pre">QuantumOptics.timeevolution</span></code></a> solvers:</p>
 <div class="cell tag_remove-input tag_remove-output docutils container">
@@ -1032,15 +862,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.006433 seconds (85.46 k allocations: 2.723 MiB)
 </pre></div>
 </div>
 </div>
@@ -1057,17 +879,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: ionprojector not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_59_0.png" src="../_images/getting_started_59_0.png" />
 </div>
 </div>
 <p>In the above plot, we see Rabi oscillations with a pi-time of 2 μs, as expected.</p>
@@ -1089,17 +901,10 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Δf not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.005078 seconds (81.06 k allocations: 2.610 MiB)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_61_1.png" src="../_images/getting_started_61_1.png" />
 </div>
 </div>
 <p>We can achieve the same effect by instead setting a nonzero value in our ion’s <code class="docutils literal notranslate"><span class="pre">stark_shift</span></code> field. This can be useful when we have several ions in our chain and want to simulate a Stark shift without involving an additional laser resource.</p>
@@ -1123,17 +928,10 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.004858 seconds (81.06 k allocations: 2.610 MiB)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_63_1.png" src="../_images/getting_started_63_1.png" />
 </div>
 </div>
 <div class="margin sidebar">
@@ -1160,19 +958,6 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 <span class="n">ψi</span> <span class="o">=</span> <span class="n">ψi_ion</span> <span class="o">⊗</span> <span class="n">ψi_mode</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">timescale</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="nb">Inf</span><span class="p">,</span> <span class="n">time_dependent_eta</span><span class="o">=</span><span class="nb">false</span><span class="p">,</span> <span class="n">displacement</span><span class="o">=</span><span class="s">&quot;truncated&quot;</span><span class="p">)</span>
 <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">ψi</span><span class="p">,</span> <span class="n">h</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: C not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -1219,17 +1004,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: ionprojector not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_72_0.png" src="../_images/getting_started_72_0.png" />
 </div>
 </div>
 <p>We see good, but not perfect agreement between the two curves. In fact, the majority of this discrepancy comes from off-resonant interaction with the first order sideband which the simulation captures but the analytical solution does not.</p>
@@ -1242,15 +1017,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: hamiltonian not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.898517 seconds (721.83 k allocations: 342.115 MiB)
 </pre></div>
 </div>
 </div>
@@ -1273,17 +1040,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: ionprojector not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_75_0.png" src="../_images/getting_started_75_0.png" />
 </div>
 </div>
 <p>Which givesa a much better agreement between the two curves.</p>
@@ -1325,17 +1082,13 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">]:</span><span class="mi">3</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.077493 seconds (1.14 M allocations: 30.203 MiB)
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.085691 seconds (1.23 M allocations: 32.718 MiB)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_79_2.png" src="../_images/getting_started_79_2.png" />
 </div>
 </div>
 <p>The fast oscillations come from off-resonant excitation of the carrier transition. The slower oscillations are from population being driven back and forth between <span class="math notranslate nohighlight">\(|S_{-1/2}, n=0\rangle \leftrightarrow |D_{-1/2}, n=1 \rangle\)</span>. We only see these when detuning blue, because we start with the vibrational mode in the ground state (<code class="docutils literal notranslate"><span class="pre">mode[0]</span></code>).</p>
@@ -1366,17 +1119,13 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.395154 seconds (1.31 M allocations: 34.835 MiB, 79.80% gc time, 1.11% compilation time)
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.067517 seconds (1.27 M allocations: 33.826 MiB)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_81_2.png" src="../_images/getting_started_81_2.png" />
 </div>
 </div>
 <p>The large detuning is coming almost entirely from an AC Stark shift off of the carrier transition.</p>
@@ -1416,17 +1165,11 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.001753 seconds (16.60 k allocations: 944.938 KiB)
+  0.001585 seconds (13.24 k allocations: 854.938 KiB)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_83_1.png" src="../_images/getting_started_83_1.png" />
 </div>
 </div>
 <p>A final note about the <code class="docutils literal notranslate"><span class="pre">rwa_cutoff</span></code>:
@@ -1457,17 +1200,10 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.040183 seconds (745.28 k allocations: 19.808 MiB)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_88_1.png" src="../_images/getting_started_88_1.png" />
 </div>
 </div>
 <p>However, we’re still stuck with the off-resonant population oscillations from the carrier transition. It turns out we can eliminate these by ramping up the amplitude of the laser at the beginning of the simulation.</p>
@@ -1489,19 +1225,6 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Efield_from_pi_time not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1524,17 +1247,10 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.088935 seconds (1.18 M allocations: 29.594 MiB, 12.87% compilation time)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_91_1.png" src="../_images/getting_started_91_1.png" />
 </div>
 </div>
 <p>To be a bit more succinct we can use a Julia <em>anonymous function</em>:</p>
@@ -1545,19 +1261,6 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">36</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1580,17 +1283,10 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">37</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.095292 seconds (1.18 M allocations: 29.703 MiB)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_94_1.png" src="../_images/getting_started_94_1.png" />
 </div>
 </div>
 <p>Even with just a 1 μs ramp, we already see noticeable reduction of the fast oscillations.</p>
@@ -1608,19 +1304,6 @@ in a time <code class="docutils literal notranslate"><span class="pre">Tp</span>
 
 <span class="c"># Set the frequency chirp</span>
 <span class="n">L</span><span class="o">.</span><span class="n">ϕ</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="o">-</span><span class="n">Δϕ</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="n">Δϕ</span> <span class="o">/</span> <span class="n">Tp</span><span class="p">)</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="n">t</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">38</span><span class="p">]:</span><span class="mi">8</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -1650,19 +1333,6 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
     <span class="k">end</span>
 <span class="k">end</span>
 <span class="n">L</span><span class="o">.</span><span class="n">E</span> <span class="o">=</span> <span class="n">Ω</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Efield_from_pi_time not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">39</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -1698,17 +1368,10 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.252925 seconds (3.30 M allocations: 67.369 MiB, 16.30% compilation time)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_101_1.png" src="../_images/getting_started_101_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1730,17 +1393,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">]:</span><span class="mi">4</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_102_0.png" src="../_images/getting_started_102_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1750,19 +1403,6 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 <span class="c"># and recompute the transition frequency</span>
 <span class="n">Δf</span> <span class="o">=</span> <span class="n">transition_frequency</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span> <span class="s">&quot;D-1/2&quot;</span><span class="p">))</span>
 <span class="n">L</span><span class="o">.</span><span class="n">Δ</span> <span class="o">=</span> <span class="n">Δf</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">42</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -1778,29 +1418,6 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Failed</span> <span class="n">to</span> <span class="n">precompile</span> <span class="n">StochasticDiffEq</span> <span class="p">[</span><span class="mi">789</span><span class="n">caeaf</span><span class="o">-</span><span class="n">c7a9</span><span class="o">-</span><span class="mi">5</span><span class="n">a7d</span><span class="o">-</span><span class="mi">9973</span><span class="o">-</span><span class="mi">96</span><span class="n">adeb23e2a0</span><span class="p">]</span> <span class="n">to</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">compiled</span><span class="o">/</span><span class="n">v1</span><span class="mf">.6</span><span class="o">/</span><span class="n">StochasticDiffEq</span><span class="o">/</span><span class="n">jl_0BnbOv</span><span class="o">.</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">error</span><span class="p">(</span><span class="n">s</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">error</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">33</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">internal_stderr</span><span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">IJuliaStdio</span><span class="p">{</span><span class="n">Base</span><span class="o">.</span><span class="n">PipeEndpoint</span><span class="p">},</span> <span class="n">internal_stdout</span><span class="p">::</span><span class="n">IJulia</span><span class="o">.</span><span class="n">IJuliaStdio</span><span class="p">{</span><span class="n">Base</span><span class="o">.</span><span class="n">PipeEndpoint</span><span class="p">},</span> <span class="n">ignore_loaded_modules</span><span class="p">::</span><span class="n">Bool</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1385</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">compilecache</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1329</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">_require</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1043</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">uuidkey</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">936</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">into</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">mod</span><span class="p">::</span><span class="n">Symbol</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">923</span>
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1809,19 +1426,6 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 <span class="n">σ</span> <span class="o">=</span> <span class="o">√</span><span class="p">(</span><span class="mi">2</span><span class="n">β</span><span class="p">)</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">StochasticDiffEq</span><span class="o">.</span><span class="n">OrnsteinUhlenbeckProcess</span><span class="p">(</span><span class="n">β</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">σ</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
 <span class="n">w</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: StochasticDiffEq not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">44</span><span class="p">]:</span><span class="mi">4</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -1836,47 +1440,12 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: w not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">(::</span><span class="n">var</span><span class="s2">&quot;#7#8&quot;</span><span class="p">)(</span><span class="n">t</span><span class="p">::</span><span class="n">Float64</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Main</span> <span class="o">./</span><span class="n">none</span><span class="p">:</span><span class="mi">0</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">iterate</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">generator</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">47</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">collect</span><span class="p">(</span><span class="n">itr</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Generator</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Float64</span><span class="p">},</span> <span class="n">var</span><span class="s2">&quot;#7#8&quot;</span><span class="p">})</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">681</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_109_0.png" src="../_images/getting_started_109_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">DSP</span><span class="o">:</span> <span class="n">periodogram</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>ArgumentError: Package DSP [717857b8-e6f2-59f4-9121-6e50c889abd2] is required but does not seem to be installed:
- - Run `Pkg.instantiate()` to install all recorded dependencies.
-
-
-Stacktrace:
- [1] _require(pkg::Base.PkgId)
-   @ Base ./loading.jl:1012
- [2] require(uuidkey::Base.PkgId)
-   @ Base ./loading.jl:936
- [3] require(into::Module, mod::Symbol)
-   @ Base ./loading.jl:923
- [4] eval
-   @ ./boot.jl:360 [inlined]
- [5] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
-   @ Base ./loading.jl:1116
 </pre></div>
 </div>
 </div>
@@ -1911,17 +1480,7 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: periodogram not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_111_0.png" src="../_images/getting_started_111_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1971,17 +1530,37 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">]:</span><span class="mi">3</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>51
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>71
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>81
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91
+</pre></div>
+</div>
+<img alt="../_images/getting_started_112_10.png" src="../_images/getting_started_112_10.png" />
 </div>
 </div>
 <p>We can compare the same magnitude of B-field fluctuations for a white PSD. We could use the stochastic solver again, but instead let’s use a Lindblad master equation solver:</p>
@@ -2011,17 +1590,10 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: hs not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>143.272311 seconds (60.78 k allocations: 12.959 MiB)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_115_1.png" src="../_images/getting_started_115_1.png" />
 </div>
 </div>
 <p>A brute force way to include shot-to-shot noise on a simulated parameter is to just run the simulation multiple times – with the parameter pulled each time from some probability distribution – and then average the results.</p>
@@ -2078,17 +1650,10 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  6.951935 seconds (84.70 M allocations: 2.378 GiB, 13.67% gc time)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_118_1.png" src="../_images/getting_started_118_1.png" />
 </div>
 </div>
 </div>
@@ -2109,17 +1674,6 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: Ca40 not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">]:</span><span class="mi">2</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2146,36 +1700,10 @@ Stacktrace:
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">54</span><span class="p">]:</span><span class="mi">4</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ψi</span> <span class="o">=</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="o">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span> <span class="o">⊗</span> <span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>  <span class="c"># initial state</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: C not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">55</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -2185,19 +1713,6 @@ Stacktrace:
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">hamiltonian</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">rwa_cutoff</span><span class="o">=</span><span class="mf">5e5</span><span class="p">)</span>
 <span class="n">tspan</span> <span class="o">=</span> <span class="mi">0</span><span class="o">:</span><span class="mf">0.25</span><span class="o">:</span><span class="mi">1000</span>
 <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">ψi</span><span class="p">,</span> <span class="n">h</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: hamiltonian not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">56</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -2233,17 +1748,7 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: analytical not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">59</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_129_0.png" src="../_images/getting_started_129_0.png" />
 </div>
 </div>
 <p>We can also see what happens when the vibrational mode starts out in a thermal state:</p>
@@ -2274,17 +1779,10 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: mode not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">60</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 12.219427 seconds (15.02 M allocations: 1.411 GiB, 7.68% gc time, 1.51% compilation time)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_131_1.png" src="../_images/getting_started_131_1.png" />
 </div>
 </div>
 <p>There is some discrepancy because of the Lamb-Dicke approximation made in the analytical solution.</p>
@@ -2323,17 +1821,10 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: C not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">61</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 12.017308 seconds (18.67 M allocations: 1.288 GiB, 5.43% gc time, 1.43% compilation time)
 </pre></div>
 </div>
+<img alt="../_images/getting_started_134_2.png" src="../_images/getting_started_134_2.png" />
 </div>
 </div>
 </div>
@@ -2347,19 +1838,6 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: IonSim not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">62</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2368,15 +1846,7 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: pc not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">63</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0545718e-34 [m²kg/s]
 </pre></div>
 </div>
 </div>
@@ -2388,15 +1858,7 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: pc not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">64</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.99792458e8 [m/s]
 </pre></div>
 </div>
 </div>
@@ -2410,15 +1872,9 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: pc not defined
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">65</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.794100069810324e10
+2.99792458e8
+0.9647321772836126
 </pre></div>
 </div>
 </div>
