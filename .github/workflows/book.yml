@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@v1.0.0
     - uses: julia-actions/setup-julia@v1
       with:
-        version: 1.4
+        version: 1.6
 
     # Install dependencies
     - name: Set up Python 3.7
