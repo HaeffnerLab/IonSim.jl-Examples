@@ -1,5 +1,5 @@
 # Book settings
-title: "" 
+title: ""
 author: ""
 logo: logo.svg
 
@@ -12,9 +12,9 @@ repository:
   path_to_book: "webpage"
 
 execute:
-  stderr_output: remove 
+  stderr_output: remove
   execute_notebooks: cache
-  timeout: 1000000 
+  timeout: 1000000
   allow_errors: true
   exclude_patterns: ["not-included/*"]
 
@@ -24,6 +24,11 @@ html:
   use_edit_page_button: true
   favicon:  "https://github.com/HaeffnerLab/IonSim.jl-Examples/blob/master/webpage/logo.svg"
   icon:  "https://github.com/HaeffnerLab/IonSim.jl-Examples/blob/master/webpage/logo.svg"
+
+bibtex_bibfiles:
+  - tutorial-notebooks/getting_started.bib
+  - example-notebooks/two_ion_vaet.bib
+  - example-notebooks/ramped_molmer_sorensen.bib
 
 sphinx:
   extra_extensions:
@@ -36,10 +41,25 @@ sphinx:
     ogp_image: "https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png"
     ogp_site_url: "https://examples.ionsim.org"
 
-launch_buttons: 
+launch_buttons:
+  notebook_interface: "jupyterlab"
   thebe: true
-  colab_url: false
   binderhub_url: "https://mybinder.org"
 
 parse:
-  myst_extended_syntax: true
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+  myst_url_schemes:
+    - mailto
+    - http
+    - https
