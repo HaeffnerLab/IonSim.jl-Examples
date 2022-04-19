@@ -5,12 +5,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Getting started with IonSim" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://examples.ionsim.org/tutorial-notebooks/getting_started.html" />
-  <meta property="og:description" content="What does IonSim do?: IonSim is built on top of QuantumOptics.jl:cite:p:`kramer2018quantumoptics` and is primarily intended to simulate the following general system: A laser shining on a linear cha..." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png" />
-  <meta property="og:image:alt" content="Getting started with IonSim" />
+<meta property="og:title" content="Getting started with IonSim" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://examples.ionsim.org/tutorial-notebooks/getting_started.html" />
+  
+<meta property="og:description" content="What does IonSim do?: IonSim is built on top of QuantumOptics.jl[ KramerPOR18] and is primarily intended to simulate the following general system: A laser shining on a linear chain of trapped ions...." />
+  
+<meta property="og:image" content="https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png" />
+  
+<meta property="og:image:alt" content="Getting started with IonSim" />
   
     <title>Getting started with IonSim</title>
     
@@ -53,15 +58,14 @@
     <script src="../_static/customize.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="../_static/customize.js"></script>
     <link rel="shortcut icon" href="../_static/small-logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -140,6 +144,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../example-notebooks/ramped_molmer_sorensen.html">
    Ramped Mølmer-Sørensen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learn
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learn-notebooks/coming_soon.html">
+   Coming Soon
   </a>
  </li>
 </ul>
@@ -226,7 +242,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/HaeffnerLab/IonSim.jl-Examples/master?urlpath=tree/webpage/tutorial-notebooks/getting_started.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/HaeffnerLab/IonSim.jl-Examples/master?urlpath=lab/tree/webpage/tutorial-notebooks/getting_started.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -404,11 +420,18 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="getting-started-with-ionsim">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">IonSim</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="getting-started-with-ionsim">
 <h1>Getting started with IonSim<a class="headerlink" href="#getting-started-with-ionsim" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-does-ionsim-do">
 <h2>What does IonSim do?<a class="headerlink" href="#what-does-ionsim-do" title="Permalink to this headline">¶</a></h2>
-<p>IonSim is built on top of <a class="reference external" href="https://qojulia.org/">QuantumOptics.jl</a><a href="#id1"><span class="problematic" id="id2">:cite:p:`kramer2018quantumoptics`</span></a> and is primarily intended to simulate the following general system:</p>
+<p>IonSim is built on top of <a class="reference external" href="https://qojulia.org/">QuantumOptics.jl</a><span id="id1">[<a class="reference internal" href="#id7" title="Sebastian Krämer, David Plankensteiner, Laurin Ostermann, and Helmut Ritsch. Quantumoptics. jl: a julia framework for simulating open quantum systems. Computer Physics Communications, 227:109–116, 2018.">KramerPOR18</a>]</span> and is primarily intended to simulate the following general system:</p>
 <div class="figure align-default" id="linear-chain-image">
 <a class="reference internal image-reference" href="../_images/trapped_ion_system.png"><img alt="../_images/trapped_ion_system.png" src="../_images/trapped_ion_system.png" style="width: 700px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">A laser shining on a linear chain of trapped ions.</span><a class="headerlink" href="#linear-chain-image" title="Permalink to this image">¶</a></p>
@@ -483,6 +506,8 @@ Variable definitions:<div class="summary-down docutils">
 <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;DSP&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
 </div>
 </div>
 <p>We’ll also load PyPlot (an interface to Python’s matplotlib), which we’ll need later</p>
@@ -756,7 +781,7 @@ Alternatively, one may use:</p>
     )
 </pre></div>
 </div>
-<p>Same as <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Efield_from_rabi_frequency</span></code></span>, but updates <code class="docutils literal notranslate"><span class="pre">laser[:E]</span></code> in-place.</p>
+<p>Same as [<code class="docutils literal notranslate"><span class="pre">Efield_from_rabi_frequency</span></code>], but updates <code class="docutils literal notranslate"><span class="pre">laser[:E]</span></code> in-place.</p>
 </div>
 <p>The last thing we need to do before we run our simulation is to construct the hamiltonian:</p>
 <div class="cell tag_remove-stderr tag_remove-output docutils container">
@@ -835,7 +860,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003229 seconds (97.46 k allocations: 3.436 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.002901 seconds (85.46 k allocations: 2.723 MiB)
 </pre></div>
 </div>
 </div>
@@ -852,7 +877,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_58_0.png" src="../_images/getting_started_58_0.png" />
+<img alt="../_images/getting_started_59_0.png" src="../_images/getting_started_59_0.png" />
 </div>
 </div>
 <p>In the above plot, we see Rabi oscillations with a pi-time of 2 μs, as expected.</p>
@@ -874,8 +899,8 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_60_0.png" src="../_images/getting_started_60_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003179 seconds (92.43 k allocations: 3.285 MiB)
+<img alt="../_images/getting_started_61_0.png" src="../_images/getting_started_61_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.013448 seconds (81.06 k allocations: 2.610 MiB)
 </pre></div>
 </div>
 </div>
@@ -901,8 +926,8 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_62_0.png" src="../_images/getting_started_62_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.004886 seconds (92.43 k allocations: 3.285 MiB)
+<img alt="../_images/getting_started_63_0.png" src="../_images/getting_started_63_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.006015 seconds (81.06 k allocations: 2.610 MiB)
 </pre></div>
 </div>
 </div>
@@ -977,7 +1002,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_71_0.png" src="../_images/getting_started_71_0.png" />
+<img alt="../_images/getting_started_72_0.png" src="../_images/getting_started_72_0.png" />
 </div>
 </div>
 <p>We see good, but not perfect agreement between the two curves. In fact, the majority of this discrepancy comes from off-resonant interaction with the first order sideband which the simulation captures but the analytical solution does not.</p>
@@ -990,7 +1015,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.674275 seconds (823.46 k allocations: 347.074 MiB, 21.01% gc time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1.036138 seconds (721.83 k allocations: 342.115 MiB, 30.96% gc time)
 </pre></div>
 </div>
 </div>
@@ -1013,7 +1038,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_74_0.png" src="../_images/getting_started_74_0.png" />
+<img alt="../_images/getting_started_75_0.png" src="../_images/getting_started_75_0.png" />
 </div>
 </div>
 <p>Which givesa a much better agreement between the two curves.</p>
@@ -1055,11 +1080,11 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.043472 seconds (1.30 M allocations: 40.076 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.114742 seconds (1.14 M allocations: 30.203 MiB)
 </pre></div>
 </div>
-<img alt="../_images/getting_started_78_1.png" src="../_images/getting_started_78_1.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.043593 seconds (1.41 M allocations: 43.429 MiB)
+<img alt="../_images/getting_started_79_1.png" src="../_images/getting_started_79_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.121956 seconds (1.23 M allocations: 32.718 MiB)
 </pre></div>
 </div>
 </div>
@@ -1092,11 +1117,11 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.048521 seconds (1.50 M allocations: 46.198 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.133294 seconds (1.31 M allocations: 34.835 MiB, 7.40% compilation time)
 </pre></div>
 </div>
-<img alt="../_images/getting_started_80_1.png" src="../_images/getting_started_80_1.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.061208 seconds (1.46 M allocations: 44.906 MiB)
+<img alt="../_images/getting_started_81_1.png" src="../_images/getting_started_81_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.125293 seconds (1.27 M allocations: 33.826 MiB)
 </pre></div>
 </div>
 </div>
@@ -1138,9 +1163,11 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_82_0.png" src="../_images/getting_started_82_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.001167 seconds (18.77 k allocations: 1.036 MiB)
-  0.001008 seconds (14.93 k allocations: 940.641 KiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.004138 seconds (16.60 k allocations: 944.938 KiB)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_83_1.png" src="../_images/getting_started_83_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003589 seconds (13.24 k allocations: 854.938 KiB)
 </pre></div>
 </div>
 </div>
@@ -1173,8 +1200,8 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_87_0.png" src="../_images/getting_started_87_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.036791 seconds (851.66 k allocations: 26.287 MiB)
+<img alt="../_images/getting_started_88_0.png" src="../_images/getting_started_88_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.111787 seconds (745.28 k allocations: 19.808 MiB)
 </pre></div>
 </div>
 </div>
@@ -1220,8 +1247,8 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_90_0.png" src="../_images/getting_started_90_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.063472 seconds (1.28 M allocations: 36.054 MiB)
+<img alt="../_images/getting_started_91_0.png" src="../_images/getting_started_91_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.165583 seconds (1.18 M allocations: 29.594 MiB, 19.49% compilation time)
 </pre></div>
 </div>
 </div>
@@ -1256,14 +1283,14 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_93_0.png" src="../_images/getting_started_93_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.046686 seconds (1.29 M allocations: 36.205 MiB)
+<img alt="../_images/getting_started_94_0.png" src="../_images/getting_started_94_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.199289 seconds (1.18 M allocations: 29.703 MiB, 24.86% gc time)
 </pre></div>
 </div>
 </div>
 </div>
 <p>Even with just a 1 μs ramp, we already see noticeable reduction of the fast oscillations.</p>
-<p>As an applied example of a time-dependent laser frequency, we can simulate Rapid Adiabatic Passage or RAP <a href="#id3"><span class="problematic" id="id4">:cite:p:`rap`</span></a>, which can be used for robust preparation of the ion in an excited state.</p>
+<p>As an applied example of a time-dependent laser frequency, we can simulate Rapid Adiabatic Passage or RAP <span id="id2">[<a class="reference internal" href="#id5" title="Chr. Wunderlich, Th. Hannemann, T. Körber, H. Häffner, Ch. Roos, W. Hänsel, R. Blatt, and F. Schmidt-Kaler. Robust state preparation of a single trapped ion by adiabatic passage. Journal of Modern Optics, 54(11):1541-1549, 2007. URL: https://doi.org/10.1080/09500340600741082, arXiv:https://doi.org/10.1080/09500340600741082, doi:10.1080/09500340600741082.">WHK+07</a>]</span>, which can be used for robust preparation of the ion in an excited state.</p>
 <hr class="docutils" />
 <p>We’ll linearly sweep through the laser’s frequency from -150 kHz to +150 kHz detuned from the carrier transition
 in a time <code class="docutils literal notranslate"><span class="pre">Tp</span></code></p>
@@ -1341,8 +1368,8 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_100_0.png" src="../_images/getting_started_100_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.127071 seconds (3.43 M allocations: 75.438 MiB)
+<img alt="../_images/getting_started_101_0.png" src="../_images/getting_started_101_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.247877 seconds (3.30 M allocations: 67.369 MiB, 38.49% compilation time)
 </pre></div>
 </div>
 </div>
@@ -1366,7 +1393,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_101_0.png" src="../_images/getting_started_101_0.png" />
+<img alt="../_images/getting_started_102_0.png" src="../_images/getting_started_102_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1413,7 +1440,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_108_0.png" src="../_images/getting_started_108_0.png" />
+<img alt="../_images/getting_started_109_0.png" src="../_images/getting_started_109_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1453,7 +1480,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_110_0.png" src="../_images/getting_started_110_0.png" />
+<img alt="../_images/getting_started_111_0.png" src="../_images/getting_started_111_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1481,9 +1508,12 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 <span class="n">Ntraj</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">ex</span> <span class="o">=</span> <span class="n">zero</span><span class="p">(</span><span class="n">tspan</span><span class="p">)</span>
 
-<span class="c"># iterate SDE solver Ntraj times and avergage results</span>
+<span class="c"># iterate SDE solver Ntraj times and average results</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">StochasticDiffEq</span><span class="o">.</span><span class="n">OrnsteinUhlenbeckProcess</span><span class="p">(</span><span class="n">β</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">σ</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">Ntraj</span>
+    <span class="k">if</span> <span class="n">mod</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="n">println</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">end</span>
     <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">stochastic</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">ψi</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">hsvec</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="n">w</span><span class="p">,</span>
     <span class="n">normalize_state</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
     <span class="n">ex</span> <span class="o">.+=</span> <span class="n">real</span><span class="o">.</span><span class="p">(</span><span class="n">expect</span><span class="p">(</span><span class="n">dm</span><span class="p">(</span><span class="n">ψi_ion</span><span class="p">)</span> <span class="o">⊗</span> <span class="n">one</span><span class="p">(</span><span class="n">mode</span><span class="p">),</span> <span class="n">sol</span><span class="p">))</span> <span class="o">./</span> <span class="n">Ntraj</span>
@@ -1500,7 +1530,21 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_111_0.png" src="../_images/getting_started_111_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+11
+21
+31
+41
+51
+61
+71
+81
+</pre></div>
+</div>
+<img alt="../_images/getting_started_112_1.png" src="../_images/getting_started_112_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91
+</pre></div>
+</div>
 </div>
 </div>
 <p>We can compare the same magnitude of B-field fluctuations for a white PSD. We could use the stochastic solver again, but instead let’s use a Lindblad master equation solver:</p>
@@ -1517,7 +1561,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 <span class="n">hs2</span> <span class="o">=</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;D-5/2&quot;</span><span class="p">]</span> <span class="o">⊗</span> <span class="n">C</span><span class="p">[</span><span class="s">&quot;D-5/2&quot;</span><span class="p">]</span><span class="o">&#39;</span> <span class="o">⊗</span> <span class="n">one</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
 
 <span class="n">tspan</span> <span class="o">=</span> <span class="n">collect</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">1.</span><span class="o">:</span><span class="mi">30000</span><span class="p">)</span>
-<span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">master</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">dm</span><span class="p">(</span><span class="n">ψi</span><span class="p">),</span> <span class="n">h</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">[</span><span class="n">hs1</span><span class="p">,</span> <span class="n">hs2</span><span class="p">],</span> <span class="n">rates</span><span class="o">=</span><span class="n">rates</span><span class="p">)</span>
+<span class="nd">@time</span> <span class="n">tout</span><span class="p">,</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">timeevolution</span><span class="o">.</span><span class="n">master</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">dm</span><span class="p">(</span><span class="n">ψi</span><span class="p">),</span> <span class="n">h</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">[</span><span class="n">hs1</span><span class="p">,</span> <span class="n">hs2</span><span class="p">],</span> <span class="n">rates</span><span class="o">=</span><span class="n">rates</span><span class="p">,</span> <span class="n">maxiters</span><span class="o">=</span><span class="mf">1e8</span><span class="p">)</span>
 
 <span class="n">ex</span> <span class="o">=</span> <span class="n">expect</span><span class="p">(</span><span class="n">dm</span><span class="p">(</span><span class="n">ψi_ion</span><span class="p">)</span> <span class="o">⊗</span> <span class="n">one</span><span class="p">(</span><span class="n">mode</span><span class="p">),</span> <span class="n">sol</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tspan</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span>
@@ -1530,8 +1574,8 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_114_0.png" src="../_images/getting_started_114_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.010879 seconds (60.30 k allocations: 12.007 MiB)
+<img alt="../_images/getting_started_115_0.png" src="../_images/getting_started_115_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.176558 seconds (60.78 k allocations: 12.959 MiB)
 </pre></div>
 </div>
 </div>
@@ -1590,8 +1634,8 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_117_0.png" src="../_images/getting_started_117_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3.205602 seconds (97.20 M allocations: 3.080 GiB, 11.70% gc time)
+<img alt="../_images/getting_started_118_0.png" src="../_images/getting_started_118_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  4.869328 seconds (84.68 M allocations: 2.378 GiB, 11.53% gc time)
 </pre></div>
 </div>
 </div>
@@ -1599,7 +1643,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 <div class="section" id="adding-more-than-a-single-ion-laser">
 <h3>Adding more than a single ion/ laser<a class="headerlink" href="#adding-more-than-a-single-ion-laser" title="Permalink to this headline">¶</a></h3>
-<p>Adding addtional lasers and ions to the system is straightforward. Here we’ll see how that’s done by modeling a Mølmer-Sørensen interaction <a href="#id5"><span class="problematic" id="id6">:cite:p:`PhysRevA.62.022311`</span></a>, which can be used to entangle the electronic states of multiple ions and requires at least two laser tones and vibrational mode.</p>
+<p>Adding addtional lasers and ions to the system is straightforward. Here we’ll see how that’s done by modeling a Mølmer-Sørensen interaction <span id="id3">[<a class="reference internal" href="#id6" title="Anders Sørensen and Klaus Mølmer. Entanglement and quantum computation with ions in thermal motion. Phys. Rev. A, 62:022311, Jul 2000. URL: https://link.aps.org/doi/10.1103/PhysRevA.62.022311, doi:10.1103/PhysRevA.62.022311.">SorensenMolmer00</a>]</span>, which can be used to entangle the electronic states of multiple ions and requires at least two laser tones and vibrational mode.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># Construct the system</span>
@@ -1688,7 +1732,7 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_128_0.png" src="../_images/getting_started_128_0.png" />
+<img alt="../_images/getting_started_129_0.png" src="../_images/getting_started_129_0.png" />
 </div>
 </div>
 <p>We can also see what happens when the vibrational mode starts out in a thermal state:</p>
@@ -1719,8 +1763,8 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_130_0.png" src="../_images/getting_started_130_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.455056 seconds (2.42 M allocations: 325.317 MiB, 6.25% gc time)
+<img alt="../_images/getting_started_131_0.png" src="../_images/getting_started_131_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  7.968179 seconds (14.78 M allocations: 1.408 GiB, 9.61% gc time, 1.88% compilation time)
 </pre></div>
 </div>
 </div>
@@ -1761,8 +1805,8 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/getting_started_133_1.png" src="../_images/getting_started_133_1.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1.175941 seconds (7.52 M allocations: 277.832 MiB, 4.38% gc time)
+<img alt="../_images/getting_started_134_1.png" src="../_images/getting_started_134_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  7.895977 seconds (18.44 M allocations: 1.285 GiB, 5.89% gc time, 1.30% compilation time)
 </pre></div>
 </div>
 </div>
@@ -1822,6 +1866,19 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container" id="id4">
+<dl class="citation">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">KramerPOR18</a></span></dt>
+<dd><p>Sebastian Krämer, David Plankensteiner, Laurin Ostermann, and Helmut Ritsch. Quantumoptics. jl: a julia framework for simulating open quantum systems. <em>Computer Physics Communications</em>, 227:109–116, 2018.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">SorensenMolmer00</a></span></dt>
+<dd><p>Anders Sørensen and Klaus Mølmer. Entanglement and quantum computation with ions in thermal motion. <em>Phys. Rev. A</em>, 62:022311, Jul 2000. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevA.62.022311">https://link.aps.org/doi/10.1103/PhysRevA.62.022311</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevA.62.022311">doi:10.1103/PhysRevA.62.022311</a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">WHK+07</a></span></dt>
+<dd><p>Chr. Wunderlich, Th. Hannemann, T. Körber, H. Häffner, Ch. Roos, W. Hänsel, R. Blatt, and F. Schmidt-Kaler. Robust state preparation of a single trapped ion by adiabatic passage. <em>Journal of Modern Optics</em>, 54(11):1541–1549, 2007. URL: <a class="reference external" href="https://doi.org/10.1080/09500340600741082">https://doi.org/10.1080/09500340600741082</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1080/09500340600741082">arXiv:https://doi.org/10.1080/09500340600741082</a>, <a class="reference external" href="https://doi.org/10.1080/09500340600741082">doi:10.1080/09500340600741082</a>.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 

@@ -5,12 +5,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Ion-laser interactions mediated by multiple vibrational modes" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://examples.ionsim.org/example-notebooks/multi-mode_interactions.html" />
-  <meta property="og:description" content="Introduction: In this notebook we will demonstrate that the simulation correctly models laser-mediated interactions between different vibrational modes in a linear chain of ions. We consider a syst..." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png" />
-  <meta property="og:image:alt" content="Ion-laser interactions mediated by multiple vibrational modes" />
+<meta property="og:title" content="Ion-laser interactions mediated by multiple vibrational modes" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://examples.ionsim.org/example-notebooks/multi-mode_interactions.html" />
+  
+<meta property="og:description" content="Introduction: In this notebook we will demonstrate that the simulation correctly models laser-mediated interactions between different vibrational modes in a linear chain of ions. We consider a syst..." />
+  
+<meta property="og:image" content="https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png" />
+  
+<meta property="og:image:alt" content="Ion-laser interactions mediated by multiple vibrational modes" />
   
     <title>Ion-laser interactions mediated by multiple vibrational modes</title>
     
@@ -53,12 +58,11 @@
     <script src="../_static/customize.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="../_static/customize.js"></script>
     <link rel="shortcut icon" href="../_static/small-logo.png"/>
@@ -138,6 +142,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="ramped_molmer_sorensen.html">
    Ramped Mølmer-Sørensen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learn
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learn-notebooks/coming_soon.html">
+   Coming Soon
   </a>
  </li>
 </ul>
@@ -224,7 +240,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/HaeffnerLab/IonSim.jl-Examples/master?urlpath=tree/webpage/example-notebooks/multi-mode_interactions.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/HaeffnerLab/IonSim.jl-Examples/master?urlpath=lab/tree/webpage/example-notebooks/multi-mode_interactions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -345,6 +361,8 @@
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">QuantumOptics</span>
 <span class="k">using</span> <span class="n">IonSim</span>
 <span class="k">using</span> <span class="n">DSP</span><span class="o">:</span> <span class="n">periodogram</span>
+<span class="k">using</span> <span class="n">Pkg</span><span class="p">;</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;LaTeXStrings&quot;</span><span class="p">)</span>
 <span class="k">using</span> <span class="n">LaTeXStrings</span>
 <span class="k">import</span> <span class="n">PyPlot</span>
 <span class="k">const</span> <span class="n">plt</span> <span class="o">=</span> <span class="n">PyPlot</span>
@@ -425,7 +443,7 @@
 <h2>Measure ion spectrum<a class="headerlink" href="#measure-ion-spectrum" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Running this scan takes a while.</p>
+<p>Running this scan takes a while (more than 15 minutes).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -746,16 +764,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "julia-1.4"
+            mode: "julia-1.6"
         },
         kernelOptions: {
-            kernelName: "julia-1.4",
+            kernelName: "julia-1.6",
             path: "./example-notebooks"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'julia-1.4'</script>
+    <script>kernelName = 'julia-1.6'</script>
 
               </div>
               
