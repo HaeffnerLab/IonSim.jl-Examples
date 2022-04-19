@@ -42,15 +42,13 @@ jobs:
       run: |
         jupyter-book build webpage
 
+    - name: Add CNAME
+      run: echo "docs.ionsim.org" > CNAME
+
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./webpage/_build/html
-    - name: Add CNAME
-      run: echo "docs.ionsim.org" > CNAME
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        file_pattern: CNAME
-        branch: gh-pages
+
