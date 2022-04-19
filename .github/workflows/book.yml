@@ -35,11 +35,12 @@ jobs:
 
     - name: Install Julia dependencies
       run: |
-        julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia; Pkg.add("PyPlot"); Pkg.add("QuantumOptics"); Pkg.add("IonSim")'
+        julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia; Pkg.add("PyPlot"); Pkg.add("QuantumOptics"); Pkg.add(Pkg.PackageSpec(;name="IonSim", version="0.2.2"))'
 
     # Build the book
     - name: Build the book
       run: |
+        rm Manifest.toml
         jupyter-book build webpage
 
     - name: Add CNAME
