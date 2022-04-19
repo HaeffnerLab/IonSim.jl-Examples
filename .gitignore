@@ -2,3 +2,4 @@ webpage/_build/
 not-included/*
 _build/*
 .ipynb_checkpoints
+webpage/**/.ipynb_checkpoints/
