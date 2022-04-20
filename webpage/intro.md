@@ -1,12 +1,7 @@
 Introduction
 ============================
 
-This page contains a collection of interactive [Jupyter notebooks](https://jupyter.org/) intended to familiarize you with using `IonSim.jl`. These notebooks are organized into several sections:
-<br> 
-
-- **Tutorials** and **Examples**: A collection of walkthroughs and examples designed to demonstrate a particular concept. 
-<br><br>
-- **Learn**: A pedagogical introduction to the core concepts in Trapped ions (state preparation, single-ion operations, entanglement-operations).
+This page contains a collection of interactive [Jupyter notebooks](https://jupyter.org/) intended to familiarize you with using `IonSim.jl`.
 
 You can return to the main page [here](https://www.ionsim.org) (or by clicking on the logo in the sidebar).
 
@@ -15,7 +10,7 @@ Where available, interactive notebooks can be launched by clicking on the <i cla
 ```
 
 ```{note}
-This webpage is built dynamically using [Jupyter Book](https://jupyterbook.org/). At build time, notebooks are executed remotely on a GitHub server. Julia's `@time` macro is used in various places to give an idea of the runtime for snippets of code. However, because of our lack of control over the execution environment, these values should be taken with a grain of salt. For example, solving for the evolution corresponding to the [VAET Hamiltonian](vaet-simulation-solve) runs as much as six times slower as compared to a standard MacBook Pro. 
+This webpage is built dynamically using [Jupyter Book](https://jupyterbook.org/). At build time, notebooks are executed remotely on a GitHub server. Julia's `@time` macro is used in various places to give an idea of the runtime for snippets of code. However, because of our lack of control over the execution environment, these values should be taken with a grain of salt. For example, solving for the evolution corresponding to the [VAET Hamiltonian](vaet-simulation-solve) runs as much as six times slower as compared to a standard MacBook Pro.
 ```
 
 
