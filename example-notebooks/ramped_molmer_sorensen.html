@@ -504,7 +504,9 @@ Variable definitions:<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># Construct the system</span><span class="w"></span>
-<span class="n">C</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ca40</span><span class="p">([</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">])</span><span class="w"></span>
+<span class="n">C</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ca40</span><span class="p">([(</span><span class="s">&quot;S1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;D5/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)])</span><span class="w"></span>
+<span class="n">set_sublevel_alias!</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="kt">Dict</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"></span>
+<span class="w">                            </span><span class="s">&quot;D&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;D5/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)))</span><span class="w"></span>
 <span class="n">L1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Laser</span><span class="p">(</span><span class="n">pointing</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="p">)])</span><span class="w"></span>
 <span class="n">L2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Laser</span><span class="p">(</span><span class="n">pointing</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="p">)])</span><span class="w"></span>
 <span class="n">chain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinearChain</span><span class="p">(</span><span class="w"></span>
@@ -515,6 +517,23 @@ Variable definitions:<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">AssertionError</span>: invalid level (&quot;S1/2&quot;, -0.5)
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">_structure</span><span class="p">(</span><span class="n">selected_level_structure</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">Tuple</span><span class="p">{</span><span class="n">String</span><span class="p">,</span> <span class="n">Float64</span><span class="p">}})</span>
+   <span class="o">@</span> <span class="n">IonSim</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">IonSim</span><span class="o">/</span><span class="n">ZXx4e</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">ions</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">131</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">Ca40</span><span class="p">(</span><span class="n">selected_level_structure</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">Tuple</span><span class="p">{</span><span class="n">String</span><span class="p">,</span> <span class="n">Float64</span><span class="p">}};</span> <span class="n">ss</span><span class="p">::</span><span class="n">Dict</span><span class="p">{</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">})</span>
+   <span class="o">@</span> <span class="n">IonSim</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">IonSim</span><span class="o">/</span><span class="n">ZXx4e</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">ions</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">80</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">Ca40</span><span class="p">(</span><span class="n">selected_level_structure</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">Tuple</span><span class="p">{</span><span class="n">String</span><span class="p">,</span> <span class="n">Float64</span><span class="p">}})</span>
+   <span class="o">@</span> <span class="n">IonSim</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">IonSim</span><span class="o">/</span><span class="n">ZXx4e</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">ions</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">80</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="mi">2</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -525,20 +544,35 @@ Variable definitions:<div class="summary-down docutils">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">vibrational_modes</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"></span>
 
 <span class="n">ϵ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10e3</span><span class="w"></span>
-<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">350</span><span class="w">  </span><span class="c"># corrects for AC stark shift from single-photon coupling to sidebands</span><span class="w"></span>
-<span class="n">Δf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transition_frequency</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">))</span><span class="w"></span>
-<span class="n">L1</span><span class="o">.</span><span class="n">Δ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Δf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mode</span><span class="o">.</span><span class="n">ν</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ϵ</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">350</span><span class="w"> </span><span class="c"># corrects for AC stark shift from single-photon coupling to sidebands</span><span class="w"></span>
+
+<span class="n">L1</span><span class="o">.</span><span class="n">λ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transitionwavelength</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">T</span><span class="p">)</span><span class="w"></span>
+<span class="n">L1</span><span class="o">.</span><span class="n">Δ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mode</span><span class="o">.</span><span class="n">ν</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ϵ</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
 <span class="n">L1</span><span class="o">.</span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ẑ</span><span class="w"></span>
 <span class="n">L1</span><span class="o">.</span><span class="n">ϵ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x̂</span><span class="w"></span>
 
-<span class="n">L2</span><span class="o">.</span><span class="n">Δ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Δf</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mode</span><span class="o">.</span><span class="n">ν</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ϵ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
+<span class="n">L2</span><span class="o">.</span><span class="n">λ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transitionwavelength</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">T</span><span class="p">)</span><span class="w"></span>
+<span class="n">L2</span><span class="o">.</span><span class="n">Δ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">mode</span><span class="o">.</span><span class="n">ν</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ϵ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
 <span class="n">L2</span><span class="o">.</span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ẑ</span><span class="w"></span>
 <span class="n">L2</span><span class="o">.</span><span class="n">ϵ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x̂</span><span class="w"></span>
 
 <span class="n">η</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">get_η</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span><span class="w"> </span><span class="n">L1</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">))</span><span class="w"></span>
 <span class="n">pi_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">η</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ϵ</span><span class="w">  </span><span class="c"># setting &#39;resonance&#39; condition: ηΩ = 1/2ϵ</span><span class="w"></span>
-<span class="n">Efield_from_pi_time!</span><span class="p">(</span><span class="n">pi_time</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">))</span><span class="w"></span>
-<span class="n">Efield_from_pi_time!</span><span class="p">(</span><span class="n">pi_time</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="n">Efield_from_pi_time!</span><span class="p">(</span><span class="n">pi_time</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="n">Efield_from_pi_time!</span><span class="p">(</span><span class="n">pi_time</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -546,8 +580,6 @@ Variable definitions:<div class="summary-down docutils">
 </div>
 <div class="section" id="build-the-hamiltonian-solve-the-system">
 <h3>Build the Hamiltonian / solve the system<a class="headerlink" href="#build-the-hamiltonian-solve-the-system" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_remove-input docutils container">
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># setup the Hamiltonian</span><span class="w"></span>
@@ -555,16 +587,39 @@ Variable definitions:<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span><span class="mi">2</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># solve system</span><span class="w"></span>
-<span class="nd">@time</span><span class="w"> </span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="p">);</span><span class="w"></span>
+<span class="nd">@time</span><span class="w"> </span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.351761 seconds (2.94 M allocations: 104.600 MiB, 7.52% gc time)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: C not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">timing</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">210</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span><span class="mi">0</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -574,18 +629,18 @@ Variable definitions:<div class="summary-down docutils">
 <h3>Plot results<a class="headerlink" href="#plot-results" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">SS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S-1/2&quot;</span><span class="p">)</span><span class="w"> </span>
-<span class="n">DD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">DS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S-1/2&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">bell_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dm</span><span class="p">((</span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="nb">im</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;D-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;D-1/2&quot;</span><span class="p">])</span><span class="o">/√</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">one</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">SS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S&quot;</span><span class="p">)</span><span class="w"> </span>
+<span class="n">DD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">DS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ionprojector</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">bell_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dm</span><span class="p">((</span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="nb">im</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;D&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;D&quot;</span><span class="p">])</span><span class="o">/√</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">one</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span><span class="w"></span>
 
 <span class="c"># compute expectation values</span><span class="w"></span>
-<span class="n">prob_SS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S-1/2⟩|S-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_DD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D-1/2⟩|D-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S-1/2⟩|D-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_DS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D-1/2⟩|S-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_bell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">bell_state</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼((|S-1/2⟩|S-1/2⟩ + i|D-1/2⟩|D-1/2⟩)/√2)</span><span class="w"></span>
+<span class="n">prob_SS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S⟩|S⟩)</span><span class="w"></span>
+<span class="n">prob_DD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D⟩|D⟩)</span><span class="w"></span>
+<span class="n">prob_SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S⟩|D⟩)</span><span class="w"></span>
+<span class="n">prob_DS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D⟩|S⟩)</span><span class="w"></span>
+<span class="n">prob_bell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">bell_state</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼((|S⟩|S⟩ + i|D⟩|D⟩)/√2)</span><span class="w"></span>
 
 <span class="c"># plot results</span><span class="w"></span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">prob_SS</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s">&quot;SS&quot;</span><span class="p">)</span><span class="w"></span>
@@ -601,7 +656,17 @@ Variable definitions:<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ramped_molmer_sorensen_14_0.png" src="../_images/ramped_molmer_sorensen_14_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -617,6 +682,19 @@ Variable definitions:<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: L1 not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="id2">
@@ -627,15 +705,38 @@ Variable definitions:<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span><span class="w"> </span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span><span class="w"> </span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.398790 seconds (3.24 M allocations: 115.248 MiB, 7.57% gc time)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: C not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">timing</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">210</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="mi">0</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -646,11 +747,11 @@ Variable definitions:<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># compute expectation values</span><span class="w"></span>
-<span class="n">prob_SS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S-1/2⟩|S-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_DD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D-1/2⟩|D-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S-1/2⟩|D-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_DS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D-1/2⟩|S-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_bell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">bell_state</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼((|S-1/2⟩|S-1/2⟩ + i|D-1/2⟩|D-1/2⟩)/√2)</span><span class="w"></span>
+<span class="n">prob_SS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S⟩|S⟩)</span><span class="w"></span>
+<span class="n">prob_DD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D⟩|D⟩)</span><span class="w"></span>
+<span class="n">prob_SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S⟩|D⟩)</span><span class="w"></span>
+<span class="n">prob_DS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D⟩|S⟩)</span><span class="w"></span>
+<span class="n">prob_bell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">bell_state</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼((|S⟩|S⟩ + i|D⟩|D⟩)/√2)</span><span class="w"></span>
 
 <span class="c"># plot results</span><span class="w"></span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">prob_SS</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s">&quot;SS&quot;</span><span class="p">)</span><span class="w"></span>
@@ -666,7 +767,17 @@ Variable definitions:<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ramped_molmer_sorensen_22_0.png" src="../_images/ramped_molmer_sorensen_22_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: SS not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span><span class="mi">2</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -677,10 +788,23 @@ Variable definitions:<div class="summary-down docutils">
 <h3>Update intensity profile<a class="headerlink" href="#update-intensity-profile" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Efield_from_pi_time</span><span class="p">(</span><span class="n">pi_time</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S-1/2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D-1/2&quot;</span><span class="p">))</span><span class="w"></span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Efield_from_pi_time</span><span class="p">(</span><span class="n">pi_time</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">))</span><span class="w"></span>
 <span class="c"># Simple amplitude ramping function</span><span class="w"></span>
 <span class="n">Ω</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="nb">π</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">E</span><span class="w"></span>
 <span class="n">L1</span><span class="o">.</span><span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Ω</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: pi_time not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -694,15 +818,38 @@ Variable definitions:<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: T not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span><span class="w"> </span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S-1/2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span><span class="w"> </span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeevolution</span><span class="o">.</span><span class="n">schroedinger_dynamic</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="s">&quot;S&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">⊗</span><span class="w"> </span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">h</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.556609 seconds (4.92 M allocations: 149.377 MiB, 10.16% gc time, 5.02% compilation time)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: C not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">timing</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">210</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">0</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
 </pre></div>
 </div>
 </div>
@@ -713,11 +860,11 @@ Variable definitions:<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># compute expectation values</span><span class="w"></span>
-<span class="n">prob_SS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S-1/2⟩|S-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_DD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D-1/2⟩|D-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S-1/2⟩|D-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_DS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D-1/2⟩|S-1/2⟩)</span><span class="w"></span>
-<span class="n">prob_bell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">bell_state</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼((|S-1/2⟩|S-1/2⟩ + i|D-1/2⟩|D-1/2⟩)/√2)</span><span class="w"></span>
+<span class="n">prob_SS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S⟩|S⟩)</span><span class="w"></span>
+<span class="n">prob_DD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D⟩|D⟩)</span><span class="w"></span>
+<span class="n">prob_SD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">SD</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|S⟩|D⟩)</span><span class="w"></span>
+<span class="n">prob_DS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">DS</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼(|D⟩|S⟩)</span><span class="w"></span>
+<span class="n">prob_bell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expect</span><span class="p">(</span><span class="n">bell_state</span><span class="p">,</span><span class="w"> </span><span class="n">sol</span><span class="p">)</span><span class="w">  </span><span class="c"># 𝔼((|S⟩|S⟩ + i|D⟩|D⟩)/√2)</span><span class="w"></span>
 
 <span class="c"># plot results</span><span class="w"></span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tout</span><span class="p">,</span><span class="w"> </span><span class="n">prob_SS</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s">&quot;SS&quot;</span><span class="p">)</span><span class="w"></span>
@@ -737,7 +884,17 @@ Variable definitions:<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ramped_molmer_sorensen_30_0.png" src="../_images/ramped_molmer_sorensen_30_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">UndefVarError</span>: SS not defined
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="mi">2</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
