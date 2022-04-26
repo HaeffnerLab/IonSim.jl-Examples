@@ -35,7 +35,7 @@ jobs:
 
     - name: Install Julia dependencies
       run: |
-        julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia; Pkg.add("PyPlot"); Pkg.add("QuantumOptics"); Pkg.add(Pkg.PackageSpec(;name="IonSim", version="0.2.2"))'
+        julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia; Pkg.add("PyPlot"); Pkg.add("QuantumOptics"); Pkg.add("IonSim")'
 
     # Build the book
     - name: Build the book
