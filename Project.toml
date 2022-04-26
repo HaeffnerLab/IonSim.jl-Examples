@@ -7,6 +7,5 @@ QuantumOptics = "6e0679c1-51ea-5a7c-ac74-d61b76210b0c"
 StochasticDiffEq = "789caeaf-c7a9-5a7d-9973-96adeb23e2a0"
 
 [compat]
-IonSim = "0.3.1"
 QuantumOptics = "0.8.0"
 julia = "1.3"
