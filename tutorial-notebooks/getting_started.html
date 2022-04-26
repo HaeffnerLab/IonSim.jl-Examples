@@ -585,7 +585,7 @@ For each <code class="docutils literal notranslate"><span class="pre">level</spa
 </div>
 </div>
 </div>
-<p>Here we have assigned the alias <code class="docutils literal notranslate"><span class="pre">&quot;S&quot;</span></code> to the sublevel <code class="docutils literal notranslate"><span class="pre">(&quot;S1/2&quot;,</span> <span class="pre">-1//2)</span></code>, and the alias <code class="docutils literal notranslate"><span class="pre">&quot;D&quot;</span></code> to the sublevel <code class="docutils literal notranslate"><span class="pre">(&quot;D5//2&quot;,</span> <span class="pre">-1/2)</span></code>. We may now refer to these sublevels by these aliases in future function calls.</p>
+<p>Here we have assigned the alias <code class="docutils literal notranslate"><span class="pre">&quot;S&quot;</span></code> to the sublevel <code class="docutils literal notranslate"><span class="pre">(&quot;S1/2&quot;,</span> <span class="pre">-1//2)</span></code>, and the alias <code class="docutils literal notranslate"><span class="pre">&quot;D&quot;</span></code> to the sublevel <code class="docutils literal notranslate"><span class="pre">(&quot;D5/2&quot;,</span> <span class="pre">-1//2)</span></code>. We may now refer to these sublevels by these aliases in future function calls.</p>
 <p>We can use the function <code class="docutils literal notranslate"><span class="pre">sublevel_aliases</span></code> to see all aliases assigned to a given <code class="docutils literal notranslate"><span class="pre">Ion</span></code>’s sublevels</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -841,7 +841,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.004189 seconds (85.47 k allocations: 2.723 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003677 seconds (85.47 k allocations: 2.723 MiB)
 </pre></div>
 </div>
 </div>
@@ -880,7 +880,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003265 seconds (81.07 k allocations: 2.611 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003920 seconds (81.07 k allocations: 2.611 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_66_1.png" src="../_images/getting_started_66_1.png" />
@@ -907,7 +907,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003882 seconds (95.18 k allocations: 2.980 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.004600 seconds (95.18 k allocations: 2.980 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_68_1.png" src="../_images/getting_started_68_1.png" />
@@ -996,7 +996,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.950724 seconds (721.66 k allocations: 342.104 MiB, 25.37% gc time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.778751 seconds (721.65 k allocations: 342.101 MiB)
 </pre></div>
 </div>
 </div>
@@ -1061,13 +1061,11 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.042558 seconds (1.14 M allocations: 30.204 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.328267 seconds (1.14 M allocations: 30.204 MiB, 82.06% gc time)
+  0.048914 seconds (1.23 M allocations: 32.719 MiB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.043556 seconds (1.23 M allocations: 32.719 MiB)
-</pre></div>
-</div>
-<img alt="../_images/getting_started_84_2.png" src="../_images/getting_started_84_2.png" />
+<img alt="../_images/getting_started_84_1.png" src="../_images/getting_started_84_1.png" />
 </div>
 </div>
 <p>The fast oscillations come from off-resonant excitation of the carrier transition. The slower oscillations are from population being driven back and forth between <span class="math notranslate nohighlight">\(|S, n=0\rangle \leftrightarrow |D, n=1 \rangle\)</span>. We only see these when detuning blue, because we start with the vibrational mode in the ground state (<code class="docutils literal notranslate"><span class="pre">mode[0]</span></code>).</p>
@@ -1098,10 +1096,10 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.056201 seconds (1.31 M allocations: 34.835 MiB, 5.48% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.057068 seconds (1.31 M allocations: 34.835 MiB, 6.53% compilation time)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.062972 seconds (1.27 M allocations: 33.826 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.054343 seconds (1.27 M allocations: 33.826 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_86_2.png" src="../_images/getting_started_86_2.png" />
@@ -1144,8 +1142,8 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.001453 seconds (16.61 k allocations: 945.422 KiB)
-  0.001246 seconds (13.25 k allocations: 855.422 KiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.001364 seconds (16.61 k allocations: 945.422 KiB)
+  0.001344 seconds (13.25 k allocations: 855.422 KiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_88_1.png" src="../_images/getting_started_88_1.png" />
@@ -1179,7 +1177,7 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.035761 seconds (745.29 k allocations: 19.808 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.042229 seconds (745.29 k allocations: 19.808 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_93_1.png" src="../_images/getting_started_93_1.png" />
@@ -1226,7 +1224,7 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.074528 seconds (1.18 M allocations: 29.595 MiB, 9.63% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.082211 seconds (1.18 M allocations: 29.595 MiB, 10.97% compilation time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_96_1.png" src="../_images/getting_started_96_1.png" />
@@ -1262,7 +1260,7 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.054497 seconds (1.18 M allocations: 29.703 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.077504 seconds (1.18 M allocations: 29.703 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_99_1.png" src="../_images/getting_started_99_1.png" />
@@ -1348,7 +1346,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.156005 seconds (3.30 M allocations: 67.369 MiB, 20.36% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.190389 seconds (3.30 M allocations: 67.369 MiB, 18.64% compilation time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_106_1.png" src="../_images/getting_started_106_1.png" />
@@ -1597,7 +1595,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>220.154940 seconds (13.33 M allocations: 1.104 GiB, 0.17% gc time, 0.03% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>250.977196 seconds (13.29 M allocations: 1.100 GiB, 0.16% gc time, 0.03% compilation time)
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>PyError ($(Expr(:escape, :(ccall(#= /home/runner/.julia/packages/PyCall/7a7w0/src/pyfncall.jl:43 =# @pysym(:PyObject_Call), PyPtr, (PyPtr, PyPtr, PyPtr), o, pyargsptr, kw))))) &lt;class &#39;ValueError&#39;&gt;
@@ -1717,7 +1715,7 @@ Stacktrace:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 24.036590 seconds (489.58 M allocations: 13.144 GiB, 16.06% gc time, 0.73% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 28.647180 seconds (489.56 M allocations: 13.143 GiB, 15.97% gc time, 0.68% compilation time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_123_1.png" src="../_images/getting_started_123_1.png" />
@@ -1840,7 +1838,7 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  8.619306 seconds (15.00 M allocations: 1.411 GiB, 8.28% gc time, 1.08% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  9.881796 seconds (14.95 M allocations: 1.407 GiB, 6.91% gc time, 1.12% compilation time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_135_1.png" src="../_images/getting_started_135_1.png" />
@@ -1882,7 +1880,7 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  8.289882 seconds (18.65 M allocations: 1.288 GiB, 3.51% gc time, 1.60% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  9.674736 seconds (18.61 M allocations: 1.284 GiB, 6.66% gc time, 1.69% compilation time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_138_2.png" src="../_images/getting_started_138_2.png" />
