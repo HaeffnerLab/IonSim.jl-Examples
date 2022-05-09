@@ -20,14 +20,12 @@ Lasers -> Trap
 // Node attributes
 Ion [
     label="{Ion \<: IonSimBasis|\
-    selected_level_structure::OrderedDict\{String,NamedTuple\}\l\
-    selected_matrix_elements::OrderedDict\{Tuple,Function\}\l\
-    stark_shift::OrderedDict\{String,Real\}\l\
-    |level_structure::OrderedDict\{String,NamedTuple\}\l\
-    matrix_elements::OrderedDict\{Tuple,Function\}\l\
-    mass::Real\l\
+    sublevels::Vector\{Tuple\{String,Rational\}\}\l\
+    stark_shift::OrderedDict\{Tuple,Real\}\l\
+    |species_properties::NamedTuple\l\
+    sublevel_aliases::Dict\{String,Tuple\}\l\
     shape::Vector\{Int\}\l\
-    number::Int\l\
+    ionnumber::Int\l\
     position::Real\l}"
 ]
 
@@ -53,12 +51,12 @@ Trap [
 
 Lasers [
     label="{Laser|\
+    λ::Real\l\
     E::Function\l\
     Δ::Real\l\
     ϵ::NamedTuple\{(:x,:y,:z)\}\l\
     k::NamedTuple\{(:x,:y,:z)\}\l\
     ϕ::Function\l\
-    λ::Real\l\
     pointing::Vector\{Tuple\{Int,Real\}\}\l}"
 ]
 VibrationalMode [ 
@@ -78,4 +76,4 @@ RotationalMode [
     not implemented}"
 ]
 
-} // diagraph
+} // digraph
