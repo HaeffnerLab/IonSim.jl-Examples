@@ -11,11 +11,11 @@ node [
 ]
 
 // Edges
-RotationalMode -> IonConfiguration
-Ion -> IonConfiguration
-VibrationalMode -> IonConfiguration
-IonConfiguration -> Trap
-Lasers -> Trap
+RotationalMode -> IonTrap
+Ion -> IonTrap
+VibrationalMode -> IonTrap
+IonTrap -> Chamber
+Lasers -> Chamber
 
 // Node attributes
 Ion [
@@ -29,18 +29,18 @@ Ion [
     position::Real\l}"
 ]
 
-IonConfiguration [
-    label="{Ring \<: IonConfiguration | not implemented}\
-    |{LinearChain \<: IonConfiguration|\
+IonTrap [
+    label="{Ring \<: IonTrap | not implemented}\
+    |{LinearChain \<: IonTrap|\
     ions::Vector\{\<:Ion\}\l\
     com_frequencies::NamedTuple\{(:x,:y,:z)\}\l\
     vibrational_modes::NamedTuple\{(:x,:y,:z),Tuple\{Vararg\{Vector\{VibrationalMode\},3\}\}\}\l\
     |full_normal_mode_description::NamedTuple\{(:x,:y,:z)\}\l }"
 ]
 
-Trap [
-    label="{Trap|\
-    configuration::\<:IonConfiguration\l\
+Chamber [
+    label="{Chamber|\
+    configuration::\<:IonTrap\l\
     B::Real\l\
     Bhat::NamedTuple\{(:x,:y,:z)\}\l\
     ∇B::Real\l\
@@ -59,7 +59,7 @@ Lasers [
     ϕ::Function\l\
     pointing::Vector\{Tuple\{Int,Real\}\}\l}"
 ]
-VibrationalMode [ 
+VibrationalMode [
     label="{VibrationalMode \<: IonSimBasis|\
     ν::Real\l\
     δν::Function\l\
