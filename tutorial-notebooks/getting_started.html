@@ -629,6 +629,8 @@ Variable definitions:<div class="sd-summary-down docutils">
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -991,7 +993,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003792 seconds (85.47 k allocations: 2.723 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.006832 seconds (85.47 k allocations: 2.723 MiB)
 </pre></div>
 </div>
 </div>
@@ -1030,7 +1032,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003559 seconds (81.07 k allocations: 2.611 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.025176 seconds (81.07 k allocations: 2.611 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_66_1.png" src="../_images/getting_started_66_1.png" />
@@ -1057,7 +1059,7 @@ case, we can set <code class="docutils literal notranslate"><span class="pre">ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.004088 seconds (95.18 k allocations: 2.980 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.030257 seconds (95.18 k allocations: 2.980 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_68_1.png" src="../_images/getting_started_68_1.png" />
@@ -1133,29 +1135,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">IncompatibleBases</span><span class="p">()</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">check_samebases</span>
-   <span class="o">@</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">bases</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">211</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">expect</span><span class="p">(</span><span class="n">op</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}},</span> <span class="n">state</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}})</span>
-   <span class="o">@</span> <span class="n">QuantumOpticsBase</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">operators_sparse</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">43</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#57</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">0</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">iterate</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">generator</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">47</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">collect</span><span class="p">(</span><span class="n">itr</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Generator</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">var</span><span class="s2">&quot;#57#58&quot;</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}}}})</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">681</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">expect</span><span class="p">(</span><span class="n">op</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}},</span> <span class="n">states</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}}})</span>
-   <span class="o">@</span> <span class="n">QuantumOpticsBase</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">operators</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">263</span>
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_77_0.png" src="../_images/getting_started_77_0.png" />
 </div>
 </div>
 <p>We see good, but not perfect agreement between the two curves. In fact, the majority of this discrepancy comes from off-resonant interaction with the first order sideband which the simulation captures but the analytical solution does not.</p>
@@ -1168,7 +1148,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1.059643 seconds (721.63 k allocations: 342.102 MiB, 27.19% gc time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2.987212 seconds (721.65 k allocations: 342.104 MiB)
 </pre></div>
 </div>
 </div>
@@ -1191,29 +1171,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">IncompatibleBases</span><span class="p">()</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">check_samebases</span>
-   <span class="o">@</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">bases</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">211</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">expect</span><span class="p">(</span><span class="n">op</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}},</span> <span class="n">state</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}})</span>
-   <span class="o">@</span> <span class="n">QuantumOpticsBase</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">operators_sparse</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">43</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#57</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">0</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">iterate</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">generator</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">47</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">collect</span><span class="p">(</span><span class="n">itr</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Generator</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">var</span><span class="s2">&quot;#57#58&quot;</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}}}})</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">681</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">expect</span><span class="p">(</span><span class="n">op</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}},</span> <span class="n">states</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}}})</span>
-   <span class="o">@</span> <span class="n">QuantumOpticsBase</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">operators</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">263</span>
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">]:</span><span class="mi">1</span>
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_80_0.png" src="../_images/getting_started_80_0.png" />
 </div>
 </div>
 <p>Which givesa a much better agreement between the two curves.</p>
@@ -1255,8 +1213,8 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.043119 seconds (1.14 M allocations: 30.204 MiB)
-  0.048836 seconds (1.23 M allocations: 32.719 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.562572 seconds (1.14 M allocations: 30.204 MiB, 75.87% gc time)
+  0.074577 seconds (1.23 M allocations: 32.719 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_84_1.png" src="../_images/getting_started_84_1.png" />
@@ -1290,13 +1248,11 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.064758 seconds (1.31 M allocations: 34.835 MiB, 6.02% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.161255 seconds (1.31 M allocations: 34.835 MiB, 9.29% compilation time)
+  0.108735 seconds (1.27 M allocations: 33.826 MiB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.064967 seconds (1.27 M allocations: 33.826 MiB)
-</pre></div>
-</div>
-<img alt="../_images/getting_started_86_2.png" src="../_images/getting_started_86_2.png" />
+<img alt="../_images/getting_started_86_1.png" src="../_images/getting_started_86_1.png" />
 </div>
 </div>
 <p>The large detuning is coming almost entirely from an AC Stark shift off of the carrier transition.</p>
@@ -1336,8 +1292,8 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.001342 seconds (16.61 k allocations: 945.422 KiB)
-  0.001176 seconds (13.25 k allocations: 855.422 KiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.003557 seconds (16.61 k allocations: 945.422 KiB)
+  0.002880 seconds (13.25 k allocations: 855.422 KiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_88_1.png" src="../_images/getting_started_88_1.png" />
@@ -1371,7 +1327,7 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.039336 seconds (745.29 k allocations: 19.808 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.108542 seconds (745.29 k allocations: 19.808 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_93_1.png" src="../_images/getting_started_93_1.png" />
@@ -1418,7 +1374,7 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.085026 seconds (1.18 M allocations: 29.595 MiB, 11.02% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.194442 seconds (1.18 M allocations: 29.595 MiB, 21.17% compilation time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_96_1.png" src="../_images/getting_started_96_1.png" />
@@ -1454,7 +1410,7 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.056706 seconds (1.18 M allocations: 29.703 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.136566 seconds (1.18 M allocations: 29.703 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_99_1.png" src="../_images/getting_started_99_1.png" />
@@ -1540,7 +1496,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.177421 seconds (3.30 M allocations: 67.369 MiB, 20.04% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.244281 seconds (3.29 M allocations: 67.342 MiB, 16.12% gc time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_106_1.png" src="../_images/getting_started_106_1.png" />
@@ -1572,11 +1528,6 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># get rid of frequency chirp</span><span class="w"></span>
 <span class="n">L</span><span class="o">.</span><span class="n">ϕ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -1732,36 +1683,18 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+11
+21
+31
+41
+51
+61
+71
+81
+91
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>51
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>71
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>81
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91
-</pre></div>
-</div>
-<img alt="../_images/getting_started_118_10.png" src="../_images/getting_started_118_10.png" />
+<img alt="../_images/getting_started_118_1.png" src="../_images/getting_started_118_1.png" />
 </div>
 </div>
 <p>We can compare the same magnitude of B-field fluctuations for a white PSD. We could use the stochastic solver again, but instead let’s use a Lindblad master equation solver:</p>
@@ -1789,30 +1722,56 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>243.304343 seconds (13.07 M allocations: 1.133 GiB, 0.19% gc time, 0.03% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>428.153191 seconds (22.26 k allocations: 5.085 MiB)
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">IncompatibleBases</span><span class="p">()</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>PyError ($(Expr(:escape, :(ccall(#= /home/neil/.julia/packages/PyCall/7a7w0/src/pyfncall.jl:43 =# @pysym(:PyObject_Call), PyPtr, (PyPtr, PyPtr, PyPtr), o, pyargsptr, kw))))) &lt;class &#39;ValueError&#39;&gt;
+ValueError(&#39;x and y must have same first dimension, but have shapes (30001,) and (10638,)&#39;)
+  File &quot;/home/neil/miniconda3/envs/sims/lib/python3.8/site-packages/matplotlib/pyplot.py&quot;, line 2794, in plot
+    return gca().plot(
+  File &quot;/home/neil/miniconda3/envs/sims/lib/python3.8/site-packages/matplotlib/axes/_axes.py&quot;, line 1665, in plot
+    lines = [*self._get_lines(*args, data=data, **kwargs)]
+  File &quot;/home/neil/miniconda3/envs/sims/lib/python3.8/site-packages/matplotlib/axes/_base.py&quot;, line 225, in __call__
+    yield from self._plot_args(this, kwargs)
+  File &quot;/home/neil/miniconda3/envs/sims/lib/python3.8/site-packages/matplotlib/axes/_base.py&quot;, line 391, in _plot_args
+    x, y = self._xy_from_xy(x, y)
+  File &quot;/home/neil/miniconda3/envs/sims/lib/python3.8/site-packages/matplotlib/axes/_base.py&quot;, line 269, in _xy_from_xy
+    raise ValueError(&quot;x and y must have same first dimension, but &quot;
 
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">check_samebases</span>
-   <span class="o">@</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">bases</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">211</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">expect</span><span class="p">(</span><span class="n">op</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}},</span> <span class="n">state</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}})</span>
-   <span class="o">@</span> <span class="n">QuantumOpticsBase</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">operators_sparse</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">43</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#57</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">0</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">iterate</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">generator</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">47</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">collect</span><span class="p">(</span><span class="n">itr</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Generator</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">var</span><span class="s2">&quot;#57#58&quot;</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}}}})</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">681</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">expect</span><span class="p">(</span><span class="n">op</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}},</span> <span class="n">states</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}}})</span>
-   <span class="o">@</span> <span class="n">QuantumOpticsBase</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">operators</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">263</span>
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">51</span><span class="p">]:</span><span class="mi">12</span>
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
+
+Stacktrace:
+  [1] pyerr_check
+    @ ~/.julia/packages/PyCall/7a7w0/src/exception.jl:62 [inlined]
+  [2] pyerr_check
+    @ ~/.julia/packages/PyCall/7a7w0/src/exception.jl:66 [inlined]
+  [3] _handle_error(msg::String)
+    @ PyCall ~/.julia/packages/PyCall/7a7w0/src/exception.jl:83
+  [4] macro expansion
+    @ ~/.julia/packages/PyCall/7a7w0/src/exception.jl:97 [inlined]
+  [5] #107
+    @ ~/.julia/packages/PyCall/7a7w0/src/pyfncall.jl:43 [inlined]
+  [6] disable_sigint
+    @ ./c.jl:458 [inlined]
+  [7] __pycall!
+    @ ~/.julia/packages/PyCall/7a7w0/src/pyfncall.jl:42 [inlined]
+  [8] _pycall!(ret::PyCall.PyObject, o::PyCall.PyObject, args::Tuple{Vector{Float64}, Vector{ComplexF64}}, nargs::Int64, kw::Ptr{Nothing})
+    @ PyCall ~/.julia/packages/PyCall/7a7w0/src/pyfncall.jl:29
+  [9] _pycall!(ret::PyCall.PyObject, o::PyCall.PyObject, args::Tuple{Vector{Float64}, Vector{ComplexF64}}, kwargs::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+    @ PyCall ~/.julia/packages/PyCall/7a7w0/src/pyfncall.jl:11
+ [10] pycall(::PyCall.PyObject, ::Type{PyCall.PyAny}, ::Vector{Float64}, ::Vararg{Any, N} where N; kwargs::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+    @ PyCall ~/.julia/packages/PyCall/7a7w0/src/pyfncall.jl:83
+ [11] pycall(::PyCall.PyObject, ::Type{PyCall.PyAny}, ::Vector{Float64}, ::Vararg{Any, N} where N)
+    @ PyCall ~/.julia/packages/PyCall/7a7w0/src/pyfncall.jl:83
+ [12] plot(::Vector{Float64}, ::Vararg{Any, N} where N; kws::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+    @ PyPlot ~/.julia/packages/PyPlot/XaELc/src/PyPlot.jl:177
+ [13] plot(::Vector{Float64}, ::Vararg{Any, N} where N)
+    @ PyPlot ~/.julia/packages/PyPlot/XaELc/src/PyPlot.jl:174
+ [14] top-level scope
+    @ In[84]:13
+ [15] eval
+    @ ./boot.jl:360 [inlined]
+ [16] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+    @ Base ./loading.jl:1116
 </pre></div>
 </div>
 </div>
@@ -1885,7 +1844,7 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 26.947788 seconds (489.72 M allocations: 13.147 GiB, 17.79% gc time, 0.82% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>118.506039 seconds (489.48 M allocations: 13.141 GiB, 9.77% gc time, 0.89% compilation time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_123_1.png" src="../_images/getting_started_123_1.png" />
@@ -2008,32 +1967,10 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  9.566157 seconds (14.93 M allocations: 1.452 GiB, 4.92% gc time, 1.25% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 24.451208 seconds (14.97 M allocations: 1.411 GiB, 10.84% gc time, 1.09% compilation time)
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">IncompatibleBases</span><span class="p">()</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">check_samebases</span>
-   <span class="o">@</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">bases</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">211</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">expect</span><span class="p">(</span><span class="n">op</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}},</span> <span class="n">state</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}})</span>
-   <span class="o">@</span> <span class="n">QuantumOpticsBase</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">operators_sparse</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">43</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#57</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">0</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">iterate</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">generator</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">47</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">collect</span><span class="p">(</span><span class="n">itr</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Generator</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">var</span><span class="s2">&quot;#57#58&quot;</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}}}})</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">array</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">681</span>
- <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">expect</span><span class="p">(</span><span class="n">op</span><span class="p">::</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">SparseArrays</span><span class="o">.</span><span class="n">SparseMatrixCSC</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">,</span> <span class="n">Int64</span><span class="p">}},</span> <span class="n">states</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">Operator</span><span class="p">{</span><span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">QuantumOpticsBase</span><span class="o">.</span><span class="n">CompositeBasis</span><span class="p">{</span><span class="n">Vector</span><span class="p">{</span><span class="n">Int64</span><span class="p">},</span> <span class="n">Tuple</span><span class="p">{</span><span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">IonSim</span><span class="o">.</span><span class="n">IonInstance</span><span class="p">{:</span><span class="n">Ca40</span><span class="p">},</span> <span class="n">VibrationalMode</span><span class="p">}},</span> <span class="n">Matrix</span><span class="p">{</span><span class="n">ComplexF64</span><span class="p">}}})</span>
-   <span class="o">@</span> <span class="n">QuantumOpticsBase</span> <span class="o">~/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">QuantumOpticsBase</span><span class="o">/</span><span class="n">IqocX</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">operators</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">263</span>
- <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">60</span><span class="p">]:</span><span class="mi">7</span>
- <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1116</span>
-</pre></div>
-</div>
+<img alt="../_images/getting_started_135_1.png" src="../_images/getting_started_135_1.png" />
 </div>
 </div>
 <p>There is some discrepancy because of the Lamb-Dicke approximation made in the analytical solution.</p>
@@ -2072,7 +2009,7 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  9.690372 seconds (18.58 M allocations: 1.329 GiB, 6.79% gc time, 1.82% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 21.806791 seconds (18.62 M allocations: 1.288 GiB, 5.04% gc time, 2.50% compilation time)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_138_2.png" src="../_images/getting_started_138_2.png" />
