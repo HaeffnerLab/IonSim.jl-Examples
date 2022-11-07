@@ -4,6 +4,7 @@ parts:
   - caption: Getting Started
     chapters:
     - file: tutorial-notebooks/getting_started
+    - file: tutorial-notebooks/Installation
   - caption: Examples
     chapters:
     - file: example-notebooks/multi-mode_interactions
