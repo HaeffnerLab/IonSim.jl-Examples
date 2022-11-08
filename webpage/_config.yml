@@ -39,7 +39,7 @@ sphinx:
     html_js_files: ['customize.js']
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     ogp_image: "https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png"
-    ogp_site_url: "https://examples.ionsim.org"
+    ogp_site_url: "https://ionsim.org"
 
 launch_buttons:
   notebook_interface: "jupyterlab"
