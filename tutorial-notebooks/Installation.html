@@ -8,9 +8,10 @@
 <meta property="og:title" content="Installation" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ionsim.org/tutorial-notebooks/Installation.html" />
+<meta property="og:site_name" content="Python" />
 <meta property="og:description" content="If you haven’t done so already, download Julia (platform specific instructions can be found here). Next, open the Julia app, which should launch a REPL session, and install IonSim using the followi..." />
 <meta property="og:image" content="https://raw.githubusercontent.com/HaeffnerLab/IonSim.jl-Examples/master/logo3_SM.png" />
-<meta property="og:image:alt" content="Installation" />
+<meta property="og:image:alt" content="Python" />
 <meta name="description" content="If you haven’t done so already, download Julia (platform specific instructions can be found here). Next, open the Julia app, which should launch a REPL session, and install IonSim using the followi..." />
 
     <title>Installation</title>
@@ -406,8 +407,8 @@ title="Print to PDF"
 <p>If you haven’t done so already, download Julia (platform specific instructions can be found here). Next, open the Julia app, which should launch a REPL session, and install IonSim using the following commands:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Pkg</span><span class="w"></span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;IonSim&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;IonSim&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -415,7 +416,7 @@ title="Print to PDF"
 <p>The main way you’ll want to interact with IonSim is inside of a Jupyter notebook. This requires IJulia.jl:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;IJulia&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;IJulia&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -423,7 +424,7 @@ title="Print to PDF"
 <p>And finally, if you’d like to follow along with the example notebooks, you’ll need at least PyPlot.jl, an interface to Python’s Matplotlib library:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;PyPlot&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;PyPlot&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -431,7 +432,7 @@ title="Print to PDF"
 <p>Updating to the latest version of IonSim is easy:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s">&quot;IonSim&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s">&quot;IonSim&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
