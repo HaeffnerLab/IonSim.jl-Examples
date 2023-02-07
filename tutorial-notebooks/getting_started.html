@@ -625,10 +625,13 @@ Variable definitions:<div class="sd-summary-down docutils">
 </aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">IonSim</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Revise</span>
+<span class="k">using</span><span class="w"> </span><span class="n">IonSim</span>
 <span class="k">using</span><span class="w"> </span><span class="n">QuantumOptics</span><span class="o">:</span><span class="w"> </span><span class="n">timeevolution</span><span class="p">,</span><span class="w"> </span><span class="n">stochastic</span><span class="p">,</span><span class="w"> </span><span class="n">Basis</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
 </div>
 </div>
 <div class="cell docutils container">
@@ -764,7 +767,7 @@ If an element of <code class="docutils literal notranslate"><span class="pre">se
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sublevelaliases</span><span class="p">(</span><span class="n">ion</span><span class="p">::</span><span class="n">Ion</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Returns a <code class="docutils literal notranslate"><span class="pre">Dict</span></code> specifying all aliases assigned to sublevels of <code class="docutils literal notranslate"><span class="pre">ion</span></code>, in the format <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">=&gt;</span> <span class="pre">sublevel</span></code>.</p>
+<p>Returns a <code class="docutils literal notranslate"><span class="pre">Dict</span></code> specifying all aliases assigned to sublevels of <code class="docutils literal notranslate"><span class="pre">ion</span></code>, in the format <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">=&gt;</span> <span class="pre">sublevel</span></code>, <code class="docutils literal notranslate"><span class="pre">ion.sublevelalias</span></code></p>
 </div>
 </div>
 <div class="cell docutils container">
@@ -793,7 +796,7 @@ If an element of <code class="docutils literal notranslate"><span class="pre">se
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>λ: missing m
 Δ: 0 Hz
 ̂ϵ: (x=0.7071067811865475, y=0.7071067811865475, z=0.0)
-k̂: (z=0, y=0, z=1)
+k̂: (x=0, y=0, z=1)
 I(t=0): 0 W/m²
 ϕ(t=0): 0.0 ⋅ 2π
 </pre></div>
@@ -1171,7 +1174,7 @@ Constructs the Hamiltonian for `chamber` as a function of time. Return type is a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.010993 seconds (81.04 k allocations: 2.601 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.031658 seconds (81.04 k allocations: 2.601 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_77_1.png" src="../_images/getting_started_77_1.png" />
@@ -1198,7 +1201,7 @@ Constructs the Hamiltonian for `chamber` as a function of time. Return type is a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.043112 seconds (95.15 k allocations: 2.970 MiB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.031258 seconds (95.15 k allocations: 2.970 MiB)
 </pre></div>
 </div>
 <img alt="../_images/getting_started_79_1.png" src="../_images/getting_started_79_1.png" />
@@ -1256,7 +1259,7 @@ Constructs the Hamiltonian for `chamber` as a function of time. Return type is a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>182.992441 seconds (26.84 M allocations: 2.286 GiB, 1.27% gc time, 31.03% compilation time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 96.818914 seconds (26.84 M allocations: 2.286 GiB, 1.63% gc time, 22.27% compilation time)
 </pre></div>
 </div>
 </div>
@@ -1317,7 +1320,7 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>172.158398 seconds (721.68 k allocations: 342.102 MiB, 1.64% gc time)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>114.648591 seconds (722.29 k allocations: 342.144 MiB, 0.66% gc time, 0.01% compilation time)
 </pre></div>
 </div>
 </div>
@@ -1340,6 +1343,9 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/getting_started_92_0.png" src="../_images/getting_started_92_0.png" />
 </div>
 </div>
 <p>Which gives a much better agreement between the two curves.</p>
@@ -1381,6 +1387,13 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3.933590 seconds (1.14 M allocations: 30.194 MiB)
+  0.220690 seconds (1.23 M allocations: 32.709 MiB)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_96_1.png" src="../_images/getting_started_96_1.png" />
+</div>
 </div>
 <p>The fast oscillations come from off-resonant excitation of the carrier transition. The slower oscillations are from population being driven back and forth between <span class="math notranslate nohighlight">\(|S, n=0\rangle \leftrightarrow |D, n=1 \rangle\)</span>. We only see these when detuning blue, because we start with the vibrational mode in the ground state (<code class="docutils literal notranslate"><span class="pre">mode[0]</span></code>).</p>
 <p>If we instead start out in <code class="docutils literal notranslate"><span class="pre">mode[1]</span></code>:</p>
@@ -1411,6 +1424,13 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 52.836977 seconds (1.31 M allocations: 34.786 MiB)
+ 32.637649 seconds (1.27 M allocations: 33.817 MiB)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_98_1.png" src="../_images/getting_started_98_1.png" />
 </div>
 </div>
 <p>The large detuning is coming almost entirely from an AC Stark shift off of the carrier transition.</p>
@@ -1449,6 +1469,13 @@ associated Laguerre polynomial. <a class="reference external" href="https://doi.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.009923 seconds (16.59 k allocations: 935.641 KiB)
+  0.009140 seconds (13.23 k allocations: 845.641 KiB)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_100_1.png" src="../_images/getting_started_100_1.png" />
+</div>
 </div>
 <p>A final note about the <code class="docutils literal notranslate"><span class="pre">rwa_cutoff</span></code>:
 If <code class="docutils literal notranslate"><span class="pre">hamiltonian</span></code> knows that you’re not performing an RWA, it can do some optimization to reduce the number of internal functions that need to be evaluated, leading to faster performance. We can let it know that we’re not performing an RWA by setting <code class="docutils literal notranslate"><span class="pre">rwa_cutoff=Inf</span></code> (this is the default value).</p>
@@ -1476,6 +1503,12 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 14.691759 seconds (745.27 k allocations: 19.802 MiB)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_105_1.png" src="../_images/getting_started_105_1.png" />
 </div>
 </div>
 <p>However, we’re still stuck with the off-resonant population oscillations from the carrier transition. It turns out we can eliminate these by ramping up the amplitude of the laser at the beginning of the simulation.</p>
@@ -1515,6 +1548,12 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 30.452336 seconds (1.38 M allocations: 32.742 MiB, 0.22% compilation time)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_108_1.png" src="../_images/getting_started_108_1.png" />
+</div>
 </div>
 <p>To be a bit more succinct we can use a Julia <em>anonymous function</em>:</p>
 <div class="cell docutils container">
@@ -1541,6 +1580,12 @@ If <code class="docutils literal notranslate"><span class="pre">hamiltonian</spa
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 43.024349 seconds (1.52 M allocations: 35.659 MiB, 3.81% compilation time)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_111_1.png" src="../_images/getting_started_111_1.png" />
 </div>
 </div>
 <p>Even with just a 1 μs ramp, we already see noticeable reduction of the fast oscillations.</p>
@@ -1624,6 +1669,12 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>127.910394 seconds (3.56 M allocations: 71.396 MiB, 9.63% compilation time)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_118_1.png" src="../_images/getting_started_118_1.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1642,6 +1693,9 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;detuning range (kHz)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/getting_started_119_0.png" src="../_images/getting_started_119_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1901,6 +1955,8 @@ as described in the referenced paper, so instead I use a sin^2 profile.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1967,6 +2023,9 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/getting_started_145_0.png" src="../_images/getting_started_145_0.png" />
+</div>
 </div>
 <p>We can also see what happens when the vibrational mode starts out in a thermal state:</p>
 <div class="cell docutils container">
@@ -1994,6 +2053,12 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&quot;Time (μs)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 48.651787 seconds (14.40 M allocations: 1.388 GiB, 6.77% gc time, 1.51% compilation time)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_147_1.png" src="../_images/getting_started_147_1.png" />
 </div>
 </div>
 <p>There is some discrepancy because of the Lamb-Dicke approximation made in the analytical solution.</p>
@@ -2032,6 +2097,12 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 22.104712 seconds (18.30 M allocations: 1.273 GiB, 2.82% gc time, 2.77% compilation time)
+</pre></div>
+</div>
+<img alt="../_images/getting_started_150_2.png" src="../_images/getting_started_150_2.png" />
+</div>
 </div>
 </section>
 </section>
@@ -2051,10 +2122,20 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0545718e-34 [m²kg/s]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">pc</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.99792458e8 [m/s]
 </pre></div>
 </div>
 </div>
@@ -2064,6 +2145,13 @@ ground and doubly excited state, respectively. <code class="docutils literal not
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">μB</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pc</span><span class="o">.</span><span class="n">ħ</span><span class="p">)</span>
 <span class="n">println</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">ħ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pc</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
 <span class="n">println</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">α</span><span class="o">^</span><span class="n">pc</span><span class="o">.</span><span class="n">α</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.794100069810324e10
+2.99792458e8
+0.9647321772836126
 </pre></div>
 </div>
 </div>
