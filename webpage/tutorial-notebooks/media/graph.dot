@@ -1,79 +1,82 @@
 digraph {
 outputorder=edgesfirst
 bgcolor=transparent
+// bgcolor=white
 
 // Default node attributes
 node [
   style="filled,bold,rounded"
-  fontname=Inter
+  fontname="Lato"
   fillcolor = "grey99"
   shape=record
 ]
 
 // Edges
-RotationalMode -> IonConfiguration
-Ion -> IonConfiguration
-VibrationalMode -> IonConfiguration
-IonConfiguration -> Trap
-Lasers -> Trap
+Ion -> LinearChain
+VibrationalMode -> LinearChain
+LinearChain -> Chamber
+Laser -> Chamber
+MagneticField -> Chamber
 
 // Node attributes
 Ion [
-    label="{Ion \<: IonSimBasis|\
-    sublevels::Vector\{Tuple\{String,Rational\}\}\l\
-    stark_shift::OrderedDict\{Tuple,Real\}\l\
-    |species_properties::NamedTuple\l\
-    sublevel_aliases::Dict\{String,Tuple\}\l\
-    shape::Vector\{Int\}\l\
-    ionnumber::Int\l\
-    position::Real\l}"
+    label="{
+        Ion \<: IonSimBasis|
+        sublevels::vector\l
+        manualshift::Dict\l
+        sublevelaliases::OrderedDict\l
+    }"
 ]
 
-IonConfiguration [
-    label="{Ring \<: IonConfiguration | not implemented}\
-    |{LinearChain \<: IonConfiguration|\
-    ions::Vector\{\<:Ion\}\l\
-    com_frequencies::NamedTuple\{(:x,:y,:z)\}\l\
-    vibrational_modes::NamedTuple\{(:x,:y,:z),Tuple\{Vararg\{Vector\{VibrationalMode\},3\}\}\}\l\
-    |full_normal_mode_description::NamedTuple\{(:x,:y,:z)\}\l }"
+LinearChain [
+    label="{
+        LinearChain \<: IonTrap|
+        ions::Vector\{\<:Ion\}\l
+        com_frequencies::NamedTuple\{(:x,:y,:z)\}\l
+        selectedmodes::NamedTuple\{(:x,:y,:z)\l
+    }"
 ]
 
-Trap [
-    label="{Trap|\
-    configuration::\<:IonConfiguration\l\
-    B::Real\l\
-    Bhat::NamedTuple\{(:x,:y,:z)\}\l\
-    ∇B::Real\l\
-    δB::Function\l\
-    lasers::Vector\{Laser\}\l\
-    |_cnst_δB::Bool\l}"
+Chamber [
+    label="{
+        Chamber|
+        configuration::\<:IonTrap\l
+        B::Real\l
+        Bhat::NamedTuple\{(:x,:y,:z)\}\l
+        ∇B::Real\l
+        δB::Function\l
+        Lasers::Vector\{Laser\}\l
+    }"
 ]
 
-Lasers [
-    label="{Laser|\
-    λ::Real\l\
-    E::Function\l\
-    Δ::Real\l\
-    ϵ::NamedTuple\{(:x,:y,:z)\}\l\
-    k::NamedTuple\{(:x,:y,:z)\}\l\
-    ϕ::Function\l\
-    pointing::Vector\{Tuple\{Int,Real\}\}\l}"
+Laser [
+    label="{
+        Laser|
+        λ::Real\l
+        E::Function\l
+        Δ::Real\l
+        ϵ::NamedTuple\{(:x,:y,:z)\}\l
+        k::NamedTuple\{(:x,:y,:z)\}\l
+        ϕ::Function\l
+        pointing::Vector\{Tuple\}\l
+    }"
 ]
 VibrationalMode [ 
-    label="{VibrationalMode \<: IonSimBasis|\
-    ν::Real\l\
-    δν::Function\l\
-    N::Int\l\
-    mode_structure::Vector\{Real\}\l\
-    |
-    shape::Vector\{Int\}\l\
-    axis::NamedTuple\{(:x,:y,:z)\}\l\
-    _cnst_δν::Bool\l}"
+    label="{
+        VibrationalMode \<: IonSimBasis|
+        ν::Real\l
+        δν::Function\l
+        N::Int\l
+        modestructure::Vector\l
+        axis::NamedTuple\{(:x,:y,:z)\}\l
+    }"
 ]
 
-RotationalMode [
-    label="{RotationalMode \<: IonSimBasis|\
-    not implemented}"
+MagneticField [
+    label="{
+        MagneticField \<: IonSimBasis|
+        not implemented
+    }"
 ]
 
 } // digraph

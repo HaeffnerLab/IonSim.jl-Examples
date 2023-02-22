@@ -3,8 +3,8 @@ root: intro
 parts:
   - caption: Getting Started
     chapters:
-    - file: tutorial-notebooks/getting_started
     - file: tutorial-notebooks/Installation
+    - file: tutorial-notebooks/Tutorial
   - caption: Examples
     chapters:
     - file: example-notebooks/multi-mode_interactions

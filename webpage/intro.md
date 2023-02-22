@@ -13,4 +13,8 @@ Where available, interactive notebooks can be launched by clicking on the <i cla
 This webpage is built dynamically using [Jupyter Book](https://jupyterbook.org/). At build time, notebooks are executed remotely on a GitHub server. Julia's `@time` macro is used in various places to give an idea of the runtime for snippets of code. However, because of our lack of control over the execution environment, these values should be taken with a grain of salt. For example, solving for the evolution corresponding to the [VAET Hamiltonian](vaet-simulation-solve) runs as much as six times slower as compared to a standard MacBook Pro.
 ```
 
+```{note}
+IonSim is maintained by Hartmut Haeffner's trapped ion group at UC Berkeley.
+```
+
 
