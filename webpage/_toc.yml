@@ -4,9 +4,16 @@ parts:
   - caption: Getting Started
     chapters:
     - file: tutorial-notebooks/Installation
-    - file: tutorial-notebooks/Tutorial
+    - file: tutorial-notebooks/getting_started
+    - file: tutorial-notebooks/Documentation
+    - file: tutorial-notebooks/patch_notes
+    - file: tutorial-notebooks/developers
+    - file: tutorial-notebooks/references 
   - caption: Examples
     chapters:
+    - file: example-notebooks/molmer-sorensen
+    - file: example-notebooks/rabi-flop
+    - file: example-notebooks/RAP
     - file: example-notebooks/multi-mode_interactions
     - file: example-notebooks/two_ion_vaet
     - file: example-notebooks/ramped_molmer_sorensen
