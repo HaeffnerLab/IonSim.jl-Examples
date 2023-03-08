@@ -7,7 +7,7 @@ parts:
     - file: tutorial-notebooks/getting_started
     - file: tutorial-notebooks/Documentation
     - file: tutorial-notebooks/patch_notes
-    - file: tutorial-notebooks/developers
+    - file: tutorial-notebooks/about_us
     - file: tutorial-notebooks/references 
   - caption: Examples
     chapters:
@@ -17,3 +17,30 @@ parts:
     - file: example-notebooks/multi-mode_interactions
     - file: example-notebooks/two_ion_vaet
     - file: example-notebooks/ramped_molmer_sorensen
+
+# format: jb-book
+# root: intro
+# parts:
+#   - caption: Getting Started
+#     chapters:
+#     - file: tutorial-notebooks/Installation
+#     - file: tutorial-notebooks/getting_started
+#     - file: tutorial-notebooks/patch_notes
+#     - file: tutorial-notebooks/about_us
+#     - file: tutorial-notebooks/references 
+#   - caption: Examples
+#     chapters:
+#     - file: example-notebooks/example-notebook
+#       sections: 
+#       - file: example-notebooks/molmer-sorensen
+#       - file: example-notebooks/rabi-flop
+#       - file: example-notebooks/RAP
+#       - file: example-notebooks/multi-mode_interactions
+#       - file: example-notebooks/two_ion_vaet
+#       - file: example-notebooks/ramped_molmer_sorensen
+#   - caption: Documentation
+#     chapters:
+#     - file: Documentation/Documentation
+#       sections:
+#       - file: something
+

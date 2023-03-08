@@ -9,6 +9,21 @@
 [![codecov][codecov-badge]][codecov-url]
 [![License: MIT][license-badge]][license-url]
 
+## Getting Started 
+
+- Installation of IonSim can be done by following instructions [here](https://examples.ionsim.org/tutorial-notebooks/Installation.html).
+- This page contains a collection of interactive [Jupyter notebooks](https://examples.ionsim.org/tutorial-notebooks/getting_started.html) intended to familiarize you with using `IonSim.jl`.
+- Documentation of IonSim can be found at [https://docs.ionsim.org](https://docs.ionsim.org)
+- The source code of IonSim.jl can be found at [https://github.com/HaeffnerLab/IonSim.jl](https://github.com/HaeffnerLab/IonSim.jl) 
+
+ <!-- For more information see:
+
++ Main code: [https://github.com/HaeffnerLab/IonSim.jl/tree/master/src](https://github.com/HaeffnerLab/IonSim.jl/tree/master/src)
++ Documentation: [https://docs.ionsim.org](https://docs.ionsim.org)
++ Examples: [https://examples.ionsim.org](https://examples.ionsim.org) -->
+
+## Overview
+
 A lightweight Julia package for simulating the dynamics of a configuration of trapped ions interacting with laser light. 
 
 A simple tool, built on top of [QuantumOptics.jl](https://qojulia.org/), for simulating the dynamics of a configuration of
@@ -28,19 +43,6 @@ Also **Ionsim.jl** is:
 + Open Source: all source code is freely available and built with extensibility in mind.
 
 
- <!-- For more information see:
-
-+ Main code: [https://github.com/HaeffnerLab/IonSim.jl/tree/master/src](https://github.com/HaeffnerLab/IonSim.jl/tree/master/src)
-+ Documentation: [https://docs.ionsim.org](https://docs.ionsim.org)
-+ Examples: [https://examples.ionsim.org](https://examples.ionsim.org) -->
-
-## Getting Started 
-
-- Installation of IonSim can be done by following instructions [here](https://examples.ionsim.org/tutorial-notebooks/Installation.html).
-- This page contains a collection of interactive [Jupyter notebooks](https://examples.ionsim.org/tutorial-notebooks/getting_started.html) intended to familiarize you with using `IonSim.jl`.
-- Documentation of IonSim is presented [here](https://docs.ionsim.org)
-
-
 ```{note}
 Where available, interactive notebooks can be launched by clicking on the <i class="fas fa-rocket"></i> icon. This allows you to launch a Jupyter session in the cloud using [BinderHub](https://mybinder.org/). Because Binder first needs to build the appropriate environment (inlcuding all dependencies), it can take a while to launch initially. Computational resources are also limited in the free service and we are not thoroughly maintaining compatability. But perhaps you'll still find this feature useful.
 ```
@@ -51,19 +53,30 @@ IonSim is maintained by Hartmut Haeffner's trapped ion group at UC Berkeley.
 
 ## Citation
 
-+ IonSim is maintained by Hartmut Haeffner's trapped ion group at UC Berkeley.
-[Paper Link]()
++ IonSim is maintained by [Hartmut Haeffner's trapped ion group](https://ions.berkeley.edu/) at UC Berkeley.
+
+If you employ IonSim in your research, please support its continued development and maintenance. Use of scqubits in research publications is appropriately acknowledged by citing: (Rewrite sentence later)
+
+[Paper Link (To Be Implemented)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## To Be Implemented
 
-If you have an idea for how to improve IonSim, need some help getting things working or have any other IonSim-related questions feel free to open a GitHub issue.
++ Heterogeneous ion chains
++ Magnetic energy transitions
++ Raman transitions
++ Integrated tools for simulating noisy systems
++ Performance improvements
++ "Pre-canned" incorporation of some topical tools, e.g. optimized pulse-shaping for fast, high-fidelity entanglement gates 
++ A Bloch-Redfield equation solver that is compatible with time-dependent Hamiltonians
++ Incorporation of non-linear couplings between vibrational modes in a linear chain
++ Visualization tools
 
+If you’d like to contribute to IonSim.jl, head over to our GitHub page.
 
-If you have any questions, please make a GitHub issue.
++ If you have a good idea of what you’d like to do and how to do it, the preferred method is to submit a pull request on GitHub.
++ If you’re less sure about your ideas, would like some feedback, or want to open up a discussion, then feel free to either open an issue on GitHub or get in contact with any of us directly at [here (To Be Implemented)](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
++ If you have an idea for how to improve IonSim, need some help getting things working or have any other IonSim-related questions feel free to open a GitHub issue.
 
-```{note}
-This webpage is built dynamically using [Jupyter Book](https://jupyterbook.org/). At build time, notebooks are executed remotely on a GitHub server. Julia's `@time` macro is used in various places to give an idea of the runtime for snippets of code. However, because of our lack of control over the execution environment, these values should be taken with a grain of salt. For example, solving for the evolution corresponding to the [VAET Hamiltonian](vaet-simulation-solve) runs as much as six times slower as compared to a standard MacBook Pro.
-```
 
 [license-url]: https://github.com/HaeffnerLab/IonSim.jl/blob/master/LICENSE.md
 [license-badge]: https://img.shields.io/badge/License-MIT-green.svg
