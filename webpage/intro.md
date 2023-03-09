@@ -11,10 +11,10 @@
 
 ## Getting Started 
 
-- Installation of IonSim can be done by following instructions [here](https://examples.ionsim.org/tutorial-notebooks/Installation.html).
+- Installation of `IonSim.jl` can be done by following instructions [here](https://examples.ionsim.org/tutorial-notebooks/Installation.html).
 - This page contains a collection of interactive [Jupyter notebooks](https://examples.ionsim.org/tutorial-notebooks/getting_started.html) intended to familiarize you with using `IonSim.jl`.
-- Documentation of IonSim can be found at [https://docs.ionsim.org](https://docs.ionsim.org)
-- The source code of IonSim.jl can be found at [https://github.com/HaeffnerLab/IonSim.jl](https://github.com/HaeffnerLab/IonSim.jl) 
+- Documentation of `IonSim.jl` can be found at [https://docs.ionsim.org](https://docs.ionsim.org).
+- The source code of `IonSim.jl` can be found at [https://github.com/HaeffnerLab/IonSim.jl](https://github.com/HaeffnerLab/IonSim.jl).
 
  <!-- For more information see:
 
@@ -33,8 +33,7 @@ trapped ions interacting with laser light.
 1. Keeps track of the physical parameters necessary for describing the system.
 2. Using these parameters, constructs a function that quickly computes the system's Hamiltonian as a function of time.
 
-The functional form of the Hamiltonian can then be used as input to any of the solvers implemented in
-[`QuantumOptics.timeevolution`](https://qojulia.org/documentation/timeevolution/timeevolution/).
+The functional form of the Hamiltonian can then be used as input to any of the solvers implemented in [`QuantumOptics.timeevolution`](https://qojulia.org/documentation/timeevolution/timeevolution/).
 
 Also **Ionsim.jl** is:
 + Fast: runtimes comparable to QuTiP (Cython)
@@ -43,21 +42,10 @@ Also **Ionsim.jl** is:
 + Open Source: all source code is freely available and built with extensibility in mind.
 
 
-```{note}
-Where available, interactive notebooks can be launched by clicking on the <i class="fas fa-rocket"></i> icon. This allows you to launch a Jupyter session in the cloud using [BinderHub](https://mybinder.org/). Because Binder first needs to build the appropriate environment (inlcuding all dependencies), it can take a while to launch initially. Computational resources are also limited in the free service and we are not thoroughly maintaining compatability. But perhaps you'll still find this feature useful.
-```
-
 <!-- ```{note}
 IonSim is maintained by Hartmut Haeffner's trapped ion group at UC Berkeley.
 ``` -->
 
-## Citation
-
-+ IonSim is maintained by [Hartmut Haeffner's trapped ion group](https://ions.berkeley.edu/) at UC Berkeley.
-
-If you employ IonSim in your research, please support its continued development and maintenance. Use of scqubits in research publications is appropriately acknowledged by citing: (Rewrite sentence later)
-
-[Paper Link (To Be Implemented)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## To Be Implemented
 
@@ -76,6 +64,14 @@ If you’d like to contribute to IonSim.jl, head over to our GitHub page.
 + If you have a good idea of what you’d like to do and how to do it, the preferred method is to submit a pull request on GitHub.
 + If you’re less sure about your ideas, would like some feedback, or want to open up a discussion, then feel free to either open an issue on GitHub or get in contact with any of us directly at [here (To Be Implemented)](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 + If you have an idea for how to improve IonSim, need some help getting things working or have any other IonSim-related questions feel free to open a GitHub issue.
+
+## Citation
+
++ IonSim is maintained by [Hartmut Haeffner's trapped ion group](https://ions.berkeley.edu/) at UC Berkeley.
+
+If you employ IonSim in your research, please support its continued development and maintenance. Use of scqubits in research publications is appropriately acknowledged by citing: (Rewrite sentence later)
+
+[Paper Link (To Be Implemented)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 
 [license-url]: https://github.com/HaeffnerLab/IonSim.jl/blob/master/LICENSE.md
