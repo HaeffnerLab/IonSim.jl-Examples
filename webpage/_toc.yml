@@ -10,3 +10,4 @@ parts:
     - file: example-notebooks/multi-mode_interactions
     - file: example-notebooks/two_ion_vaet
     - file: example-notebooks/ramped_molmer_sorensen
+    - file: example-notebooks/mixed_species_chains
